@@ -1,0 +1,1 @@
+PASS: real tmux Insert does not execute; Cancel sends nothing; explicit Run executes; Bash survives AI pane exit

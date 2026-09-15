@@ -1,0 +1,3 @@
+ERROR: Command '('nvidia-smi', '--query-gpu=index,name,pci.bus_id,memory.total', '--format=csv,noheader,nounits')' returned non-zero exit status 18.
+Failed to initialize NVML: Driver/library version mismatch
+NVML library version: 580.178

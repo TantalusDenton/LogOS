@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+config/logos.conf
+.work/
+*.part
+*.tar.*
+config/*.sudoers

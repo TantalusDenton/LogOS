@@ -1,0 +1,1 @@
+Run this helper from your existing root terminal to authorize a shared root console.

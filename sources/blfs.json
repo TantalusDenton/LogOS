@@ -1,0 +1,211 @@
+[
+  {
+    "name": "libtasn1-4.21.0.tar.gz",
+    "url": "https://ftpmirror.gnu.org/libtasn1/libtasn1-4.21.0.tar.gz",
+    "checksum": "md5:2ee1d9f3aa66f1e308c46a283aa9a8c2",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/general/libtasn1.html"
+  },
+  {
+    "name": "p11-kit-0.26.5.tar.xz",
+    "url": "https://github.com/p11-glue/p11-kit/releases/download/0.26.5/p11-kit-0.26.5.tar.xz",
+    "checksum": "md5:308306e889850bff08fae74ae7897a21",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/postlfs/p11-kit.html"
+  },
+  {
+    "name": "make-ca-1.16.1.tar.gz",
+    "url": "https://github.com/lfs-book/make-ca/archive/v1.16.1/make-ca-1.16.1.tar.gz",
+    "checksum": "md5:bf9cea2d24fc5344d4951b49f275c595",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/postlfs/make-ca.html"
+  },
+  {
+    "name": "curl-8.21.0.tar.xz",
+    "url": "https://curl.se/download/curl-8.21.0.tar.xz",
+    "checksum": "md5:230131079987135cbe1eadb77a04af57",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/basicnet/curl.html"
+  },
+  {
+    "name": "libarchive-3.8.9.tar.xz",
+    "url": "https://github.com/libarchive/libarchive/releases/download/v3.8.9/libarchive-3.8.9.tar.xz",
+    "checksum": "md5:535e3afec5f61d493f0b1b9e8bcf7539",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/general/libarchive.html"
+  },
+  {
+    "name": "libuv-v1.52.1.tar.gz",
+    "url": "https://dist.libuv.org/dist/v1.52.1/libuv-v1.52.1.tar.gz",
+    "checksum": "md5:db711bbe3822dd4fe51fad0cd78baa57",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/general/libuv.html"
+  },
+  {
+    "name": "cmake-4.4.2.tar.gz",
+    "url": "https://cmake.org/files/v4.4/cmake-4.4.2.tar.gz",
+    "checksum": "md5:6911f0379d901db23619413f092b99ef",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/general/cmake.html"
+  },
+  {
+    "name": "util-macros-1.20.2.tar.xz",
+    "url": "https://www.x.org/pub/individual/util/util-macros-1.20.2.tar.xz",
+    "checksum": "md5:5f683a1966834b0a6ae07b3680bcb863",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/util-macros.html"
+  },
+  {
+    "name": "xorgproto-2025.1.tar.xz",
+    "url": "https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2025.1.tar.xz",
+    "checksum": "md5:15534fa6fb13a6a70afe7561c1424f3c",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/xorgproto.html"
+  },
+  {
+    "name": "libXau-1.0.12.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXau-1.0.12.tar.xz",
+    "checksum": "md5:4c9f81acf00b62e5de56a912691bd737",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/libXau.html"
+  },
+  {
+    "name": "libXdmcp-1.1.5.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXdmcp-1.1.5.tar.xz",
+    "checksum": "md5:ce0af51de211e4c99a111e64ae1df290",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/libXdmcp.html"
+  },
+  {
+    "name": "xcb-proto-1.17.0.tar.xz",
+    "url": "https://xorg.freedesktop.org/archive/individual/proto/xcb-proto-1.17.0.tar.xz",
+    "checksum": "md5:c415553d2ee1a8cea43c3234a079b53f",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/xcb-proto.html"
+  },
+  {
+    "name": "libxcb-1.17.0.tar.xz",
+    "url": "https://xorg.freedesktop.org/archive/individual/lib/libxcb-1.17.0.tar.xz",
+    "checksum": "md5:96565523e9f9b701fcb35d31f1d4086e",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/libxcb.html"
+  },
+  {
+    "name": "xtrans-1.6.0.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/xtrans-1.6.0.tar.xz",
+    "checksum": "md5:6ad67d4858814ac24e618b8072900664",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libX11-1.8.13.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libX11-1.8.13.tar.xz",
+    "checksum": "md5:b617a053d2003cc81309f4e13d01379c",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libXext-1.3.7.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXext-1.3.7.tar.xz",
+    "checksum": "md5:ea8149187a26e9df6dbd94a60b3d8da0",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libICE-1.1.2.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libICE-1.1.2.tar.xz",
+    "checksum": "md5:d1ffde0a07709654b20bada3f9abdd16",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libSM-1.2.6.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libSM-1.2.6.tar.xz",
+    "checksum": "md5:3aeeea05091db1c69e6f768e0950a431",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libXt-1.3.1.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXt-1.3.1.tar.xz",
+    "checksum": "md5:9acd189c68750b5028cf120e53c68009",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libXmu-1.3.1.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXmu-1.3.1.tar.xz",
+    "checksum": "md5:1ef8065f0284e76c2238770365012ab2",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libXpm-3.5.19.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXpm-3.5.19.tar.xz",
+    "checksum": "md5:cdc7a83243dba674b1ea3c365a1deab1",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libXaw-1.0.16.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXaw-1.0.16.tar.xz",
+    "checksum": "md5:2a9793533224f92ddad256492265dd82",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "xdpyinfo-1.4.0.tar.xz",
+    "url": "https://www.x.org/pub/individual/app/xdpyinfo-1.4.0.tar.xz",
+    "checksum": "md5:700556957773d378fa16a65a4406be0a",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7app.html"
+  },
+  {
+    "name": "libevent-2.1.13-stable.tar.gz",
+    "url": "https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz",
+    "checksum": "md5:eaa0bd3472b5d6a52ac6b9e0b7418b03",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/basicnet/libevent.html"
+  },
+  {
+    "name": "xterm-411.tgz",
+    "url": "https://invisible-mirror.net/archives/xterm/xterm-411.tgz",
+    "checksum": "md5:08193f9b11db32c37aad00be4e386933",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/xterm.html"
+  },
+  {
+    "name": "tmux-3.7c.tar.gz",
+    "url": "https://github.com/tmux/tmux/releases/download/3.7c/tmux-3.7c.tar.gz",
+    "checksum": "sha256:7c60cae9a0e25288e2e24750aafc9e8800fc7fd4555e447e1b29ee4201cfb3bf",
+    "license": "ISC",
+    "book": "https://github.com/tmux/tmux/releases/tag/3.7c"
+  },
+  {
+    "name": "certdata.txt",
+    "url": "https://raw.githubusercontent.com/nss-dev/nss/2354c276f03e660c412f992c9df549593c668f49/lib/ckfw/builtins/certdata.txt",
+    "checksum": "git-blob:0a451693c675b9dba2805271516d672db913a204",
+    "license": "MPL-2.0"
+  },
+  {
+    "name": "libXfixes-6.0.2.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXfixes-6.0.2.tar.xz",
+    "checksum": "md5:baa39ada682dd524491a165bb0dfc708",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libXi-1.8.3.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXi-1.8.3.tar.xz",
+    "checksum": "md5:2b1cde310bc361464df43276fb969adf",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  },
+  {
+    "name": "libXtst-1.2.5.tar.xz",
+    "url": "https://www.x.org/pub/individual/lib/libXtst-1.2.5.tar.xz",
+    "checksum": "md5:b62dc44d8e63a67bb10230d54c44dcb7",
+    "license": "See upstream source",
+    "book": "https://www.linuxfromscratch.org/blfs/view/13.1-systemd/x/x7lib.html"
+  }
+]

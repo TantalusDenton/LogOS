@@ -1,0 +1,16 @@
+# Shell assignments; trusted administrator configuration. Copy to logos.conf.
+LOGOS_BUILD=/srv/logos
+JOBS=8
+MIN_FREE_GIB=80
+RESERVE_GIB=20
+LOGOS_CONTAINER=logos-dev
+LOGOS_IMAGE=logos/0.1
+LOGOS_CPUS=8
+LOGOS_MEMORY=16GiB
+LOGOS_DISPLAY=:100
+LOGOS_SCREEN=1600x900
+LOGOS_NETWORK=lxdbr0
+# Set to a pool with adequate free space; do not use a nearly full root disk.
+LOGOS_STORAGE=default
+# Optional limit, not preallocated; unset uses the pool's default.
+# LOGOS_DISK_SIZE=30GiB

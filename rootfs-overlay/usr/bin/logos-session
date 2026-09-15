@@ -1,0 +1,21 @@
+#!/bin/bash
+set -euo pipefail
+export DISPLAY=${DISPLAY:-:100}
+export HOME=/home/logos
+cd "$HOME"
+if [[ ${1:-} != --tmux ]]; then
+ dimensions=$(xdpyinfo | awk '/dimensions:/{print $2; exit}')
+ width=${dimensions%x*}; height=${dimensions#*x}
+ [[ $width =~ ^[0-9]+$ && $height =~ ^[0-9]+$ ]] || exit 1
+ # Core 9x15 font is served by Xephyr; fill its initial screen without a WM.
+ exec xterm -title 'LogOS AI Terminal' -fn 9x15 -b 0 -bw 0 -geometry "$((width/9))x$((height/15))+0+0" -e /usr/bin/logos-session --tmux
+fi
+# Dedicated tmux server; the Bash pane survives exit/crash of the AI pane.
+if ! tmux -L logos has-session -t logos 2>/dev/null; then
+ pane=$(tmux -L logos new-session -d -s logos -n terminal -P -F '#{pane_id}' /bin/bash --login)
+ tmux -L logos set-option -t logos remain-on-exit on
+ tmux -L logos set-option -t logos status-left ' LogOS AI Terminal '
+ tmux -L logos split-window -h -l 30% -t "$pane" -e "LOGOS_SHELL_PANE=$pane" /usr/bin/logos-ai --interactive
+ tmux -L logos select-pane -t "$pane"
+fi
+exec tmux -L logos attach-session -t logos

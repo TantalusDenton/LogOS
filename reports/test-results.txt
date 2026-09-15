@@ -1,0 +1,42 @@
+PYTHONPATH=logos-ai /usr/bin/python3 -m unittest discover -s logos-ai/tests -v
+test_bad_pane_rejected (test_ai.Approval.test_bad_pane_rejected) ... ok
+test_busy_pane_rejected (test_ai.Approval.test_busy_pane_rejected) ... ok
+test_cancel_and_invalid_choices_never_send (test_ai.Approval.test_cancel_and_invalid_choices_never_send) ... ok
+test_capture_sends_at_most_forty_lines (test_ai.Approval.test_capture_sends_at_most_forty_lines) ... ok
+test_context_capture_explicit (test_ai.Approval.test_context_capture_explicit) ... ok
+test_high_confirmed (test_ai.Approval.test_high_confirmed) ... ok
+test_high_requires_exact_run (test_ai.Approval.test_high_requires_exact_run) ... ok
+test_insert_never_enters (test_ai.Approval.test_insert_never_enters) ... ok
+test_run_clears_partial_line (test_ai.Approval.test_run_clears_partial_line) ... ok
+test_send_literal_without_second_shell (test_ai.Approval.test_send_literal_without_second_shell) ... ok
+test_literal_shell_syntax_allowed_for_approval (test_ai.Protocol.test_literal_shell_syntax_allowed_for_approval) ... ok
+test_no_controls_or_newlines (test_ai.Protocol.test_no_controls_or_newlines) ... ok
+test_reject_bad_schema (test_ai.Protocol.test_reject_bad_schema) ... ok
+test_remote_rejected (test_ai.Protocol.test_remote_rejected) ... ok
+test_terminal_escape_output (test_ai.Protocol.test_terminal_escape_output) ... ok
+test_unknown_route (test_ai.Protocol.test_unknown_route) ... ok
+test_valid (test_ai.Protocol.test_valid) ... ok
+test_high (test_ai.Risks.test_high) ... ok
+test_low (test_ai.Risks.test_low) ... ok
+test_medium (test_ai.Risks.test_medium) ... ok
+test_model_can_raise_risk (test_ai.Risks.test_model_can_raise_risk) ... ok
+test_redirect_rejected_before_any_remote_connection (test_local_http.LocalHTTP.test_redirect_rejected_before_any_remote_connection) ... ok
+test_schema_sent_and_only_loopback_used_despite_proxy (test_local_http.LocalHTTP.test_schema_sent_and_only_loopback_used_despite_proxy) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.044s
+
+OK
+/usr/bin/python3 -m unittest discover -s tests -v
+test_checksum_mismatch_fails_closed (test_build.Build.test_checksum_mismatch_fails_closed) ... ok
+test_cuda_pin (test_build.Build.test_cuda_pin) ... ok
+test_git_blob_integrity (test_build.Build.test_git_blob_integrity) ... ok
+test_no_unresolved_book_placeholders (test_build.Build.test_no_unresolved_book_placeholders) ... ok
+test_recipes_and_sources_resolve (test_build.Build.test_recipes_and_sources_resolve) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.012s
+
+OK
+find build host rootfs-overlay -type f -name '*.sh' -print0 | xargs -0 -n1 bash -n
+bash -n rootfs-overlay/usr/bin/logos-session

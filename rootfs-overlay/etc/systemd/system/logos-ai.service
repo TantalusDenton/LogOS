@@ -1,0 +1,25 @@
+[Unit]
+Description=LogOS local llama.cpp CUDA inference
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+User=logos-ai
+Group=logos-ai
+SupplementaryGroups=video
+ExecStartPre=/usr/libexec/logos/cuda-test
+ExecStart=/usr/libexec/logos/server
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_UNIX
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

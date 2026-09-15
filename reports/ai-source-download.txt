@@ -1,0 +1,18 @@
+SOURCE cuda_nvcc-linux-x86_64-12.9.86-archive.tar.xz
+SOURCE cuda_cudart-linux-x86_64-12.9.79-archive.tar.xz
+SOURCE cuda_cccl-linux-x86_64-12.9.27-archive.tar.xz
+SOURCE libcublas-linux-x86_64-12.9.1.4-archive.tar.xz
+SOURCE gcc-14.3.0.tar.xz
+SOURCE llama.cpp.git
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+From https://github.com/ggml-org/llama.cpp
+ * branch            38a5b42d9a3e82e0a586bcd1caed121f36c87a73 -> FETCH_HEAD

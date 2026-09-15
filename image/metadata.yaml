@@ -1,0 +1,8 @@
+architecture: x86_64
+creation_date: 1788220800
+properties:
+  architecture: x86_64
+  description: LogOS Developer Preview 0.1 (LFS 13.1 systemd)
+  os: LogOS
+  release: '0.1'
+  variant: ai-terminal

@@ -1,0 +1,2 @@
+ERROR: Command '('lxc', 'query', '/1.0/instances/logos-dev')' returned non-zero exit status 1.
+Error: Failed fetching instance "logos-dev" in project "default": Instance not found

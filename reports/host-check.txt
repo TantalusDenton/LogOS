@@ -1,0 +1,93 @@
+x86_64                   PASS
+Workspace capacity       PASS
+/usr/bin/bash
+bash                     PASS
+/usr/bin/gcc
+gcc                      PASS
+/usr/bin/g++
+g++                      PASS
+/usr/bin/make
+make                     PASS
+/usr/bin/bison
+bison                    PASS
+gawk                     FAIL
+texi2any                 FAIL
+/usr/bin/patch
+patch                    PASS
+/usr/bin/tar
+tar                      PASS
+/usr/bin/xz
+xz                       PASS
+/usr/bin/bzip2
+bzip2                    PASS
+/usr/bin/gzip
+gzip                     PASS
+/usr/bin/sed
+sed                      PASS
+/usr/bin/grep
+grep                     PASS
+/usr/bin/diff
+diff                     PASS
+/usr/bin/find
+find                     PASS
+/usr/bin/perl
+perl                     PASS
+/usr/bin/python3
+python3                  PASS
+/usr/bin/wget
+wget                     PASS
+/usr/bin/curl
+curl                     PASS
+/usr/bin/git
+git                      PASS
+/usr/sbin/chroot
+chroot                   PASS
+/usr/bin/mount
+mount                    PASS
+/usr/bin/unshare
+unshare                  PASS
+/usr/bin/readelf
+readelf                  PASS
+/usr/bin/flock
+flock                    PASS
+sh is Bash               FAIL
+awk is GNU awk           FAIL
+yacc is Bison            PASS
+OK:    Coreutils 9.4    >= 8.1
+OK:    Bash      5.2.21 >= 3.2
+OK:    Binutils  2.42   >= 2.13.1
+OK:    Bison     3.8.2  >= 2.7
+OK:    Diffutils 3.10   >= 2.8.1
+OK:    Findutils 4.9.0  >= 4.2.31
+ERROR: Cannot find gawk (Gawk)
+OK:    GCC       13.3.0 >= 5.4
+OK:    GCC (C++) 13.3.0 >= 5.4
+OK:    Grep      3.11   >= 2.5.1a
+OK:    Gzip      1.12   >= 1.3.12
+OK:    M4        1.4.19 >= 1.4.10
+OK:    Make      4.3    >= 4.0
+OK:    Patch     2.7.6  >= 2.5.4
+OK:    Perl      5.38.2 >= 5.8.8
+OK:    Python    3.12.3 >= 3.4
+OK:    Sed       4.9    >= 4.1.5
+OK:    Tar       1.35   >= 1.22
+ERROR: Cannot find texi2any (Texinfo)
+OK:    Xz        5.4.5  >= 5.0.0
+OK:    Linux Kernel 6.8.0 >= 5.10
+OK:    Linux Kernel supports UNIX 98 PTY
+Aliases:
+ERROR: awk  is NOT GNU
+OK:    yacc is Bison
+ERROR: sh   is NOT Bash
+Compiler check:
+OK:    g++ works
+OK: nproc reports 12 logical cores are available
+LFS version requirements FAIL
+Failed to initialize NVML: Driver/library version mismatch
+NVML library version: 580.178
+NVIDIA host runtime      FAIL
+Client version: 6.9
+Server version: 6.9
+LXD server               PASS
+/usr/bin/Xephyr
+Xephyr                   PASS

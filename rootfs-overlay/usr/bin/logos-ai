@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+from logos_ai.main import main
+
+raise SystemExit(main())

@@ -1,0 +1,5 @@
+Xephyr :100 started on the local desktop DISPLAY.
+xdpyinfo confirmed 1600x900.
+TCP 6100 listeners: none.
+Core font query: 9x15
+No LogOS container or X client was used in this host-only smoke test.

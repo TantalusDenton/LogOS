@@ -1,0 +1,779 @@
+[
+  {
+    "stage": "01-toolchain",
+    "id": "chapter05-binutils-pass1",
+    "source": "binutils-2.47.tar.xz",
+    "recipe": "build/recipes/chapter05-binutils-pass1.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter05/binutils-pass1.html"
+  },
+  {
+    "stage": "01-toolchain",
+    "id": "chapter05-gcc-pass1",
+    "source": "gcc-16.2.0.tar.xz",
+    "recipe": "build/recipes/chapter05-gcc-pass1.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter05/gcc-pass1.html"
+  },
+  {
+    "stage": "01-toolchain",
+    "id": "chapter05-linux-headers",
+    "source": "linux-7.1.8.tar.xz",
+    "recipe": "build/recipes/chapter05-linux-headers.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter05/linux-headers.html"
+  },
+  {
+    "stage": "01-toolchain",
+    "id": "chapter05-glibc",
+    "source": "glibc-2.44.tar.xz",
+    "recipe": "build/recipes/chapter05-glibc.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter05/glibc.html"
+  },
+  {
+    "stage": "01-toolchain",
+    "id": "chapter05-gcc-libstdc++",
+    "source": "gcc-16.2.0.tar.xz",
+    "recipe": "build/recipes/chapter05-gcc-libstdc++.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter05/gcc-libstdc++.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-m4",
+    "source": "m4-1.4.21.tar.xz",
+    "recipe": "build/recipes/chapter06-m4.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/m4.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-ncurses",
+    "source": "ncurses-6.6.tar.gz",
+    "recipe": "build/recipes/chapter06-ncurses.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/ncurses.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-bash",
+    "source": "bash-5.3.tar.gz",
+    "recipe": "build/recipes/chapter06-bash.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/bash.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-coreutils",
+    "source": "coreutils-9.11.tar.xz",
+    "recipe": "build/recipes/chapter06-coreutils.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/coreutils.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-diffutils",
+    "source": "diffutils-3.12.tar.xz",
+    "recipe": "build/recipes/chapter06-diffutils.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/diffutils.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-file",
+    "source": "file-5.48.tar.gz",
+    "recipe": "build/recipes/chapter06-file.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/file.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-findutils",
+    "source": "findutils-4.11.0.tar.xz",
+    "recipe": "build/recipes/chapter06-findutils.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/findutils.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-gawk",
+    "source": "gawk-5.4.1.tar.xz",
+    "recipe": "build/recipes/chapter06-gawk.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/gawk.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-grep",
+    "source": "grep-3.12.tar.xz",
+    "recipe": "build/recipes/chapter06-grep.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/grep.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-gzip",
+    "source": "gzip-1.14.tar.xz",
+    "recipe": "build/recipes/chapter06-gzip.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/gzip.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-make",
+    "source": "make-4.4.1.tar.gz",
+    "recipe": "build/recipes/chapter06-make.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/make.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-patch",
+    "source": "patch-2.8.tar.xz",
+    "recipe": "build/recipes/chapter06-patch.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/patch.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-sed",
+    "source": "sed-4.10.tar.xz",
+    "recipe": "build/recipes/chapter06-sed.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/sed.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-tar",
+    "source": "tar-1.35.tar.xz",
+    "recipe": "build/recipes/chapter06-tar.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/tar.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-xz",
+    "source": "xz-5.8.3.tar.xz",
+    "recipe": "build/recipes/chapter06-xz.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/xz.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-binutils-pass2",
+    "source": "binutils-2.47.tar.xz",
+    "recipe": "build/recipes/chapter06-binutils-pass2.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/binutils-pass2.html"
+  },
+  {
+    "stage": "02-temporary-system",
+    "id": "chapter06-gcc-pass2",
+    "source": "gcc-16.2.0.tar.xz",
+    "recipe": "build/recipes/chapter06-gcc-pass2.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter06/gcc-pass2.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-creatingdirs",
+    "source": null,
+    "recipe": "build/recipes/chapter07-creatingdirs.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/creatingdirs.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-createfiles",
+    "source": null,
+    "recipe": "build/recipes/chapter07-createfiles.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/createfiles.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-gettext",
+    "source": "gettext-1.0.tar.xz",
+    "recipe": "build/recipes/chapter07-gettext.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/gettext.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-bison",
+    "source": "bison-3.8.2.tar.xz",
+    "recipe": "build/recipes/chapter07-bison.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/bison.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-perl",
+    "source": "perl-5.44.0.tar.xz",
+    "recipe": "build/recipes/chapter07-perl.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/perl.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-zlib",
+    "source": "zlib-1.3.2.tar.gz",
+    "recipe": "build/recipes/chapter07-zlib.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/zlib.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-mpdecimal",
+    "source": "mpdecimal-4.0.1.tar.gz",
+    "recipe": "build/recipes/chapter07-mpdecimal.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/mpdecimal.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-Python",
+    "source": "Python-3.14.7.tar.xz",
+    "recipe": "build/recipes/chapter07-Python.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/Python.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-texinfo",
+    "source": "texinfo-7.3.tar.xz",
+    "recipe": "build/recipes/chapter07-texinfo.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/texinfo.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter07-util-linux",
+    "source": "util-linux-2.42.2.tar.xz",
+    "recipe": "build/recipes/chapter07-util-linux.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter07/util-linux.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-man-pages",
+    "source": "man-pages-6.18.tar.xz",
+    "recipe": "build/recipes/chapter08-man-pages.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/man-pages.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-iana-etc",
+    "source": "iana-etc-20260805.tar.gz",
+    "recipe": "build/recipes/chapter08-iana-etc.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/iana-etc.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-glibc",
+    "source": "glibc-2.44.tar.xz",
+    "recipe": "build/recipes/chapter08-glibc.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/glibc.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-zlib",
+    "source": "zlib-1.3.2.tar.gz",
+    "recipe": "build/recipes/chapter08-zlib.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/zlib.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-bzip2",
+    "source": "bzip2-1.0.8.tar.gz",
+    "recipe": "build/recipes/chapter08-bzip2.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/bzip2.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-xz",
+    "source": "xz-5.8.3.tar.xz",
+    "recipe": "build/recipes/chapter08-xz.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/xz.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-lz4",
+    "source": "lz4-1.10.0.tar.gz",
+    "recipe": "build/recipes/chapter08-lz4.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/lz4.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-zstd",
+    "source": "zstd-1.5.7.tar.gz",
+    "recipe": "build/recipes/chapter08-zstd.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/zstd.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-file",
+    "source": "file-5.48.tar.gz",
+    "recipe": "build/recipes/chapter08-file.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/file.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-readline",
+    "source": "readline-8.3.tar.gz",
+    "recipe": "build/recipes/chapter08-readline.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/readline.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-pcre2",
+    "source": "pcre2-10.47.tar.bz2",
+    "recipe": "build/recipes/chapter08-pcre2.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/pcre2.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-m4",
+    "source": "m4-1.4.21.tar.xz",
+    "recipe": "build/recipes/chapter08-m4.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/m4.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-bc",
+    "source": "bc-7.0.3.tar.xz",
+    "recipe": "build/recipes/chapter08-bc.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/bc.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-flex",
+    "source": "flex-2.6.4.tar.gz",
+    "recipe": "build/recipes/chapter08-flex.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/flex.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-tcl",
+    "source": "tcl8.6.18-src.tar.gz",
+    "recipe": "build/recipes/chapter08-tcl.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/tcl.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-expect",
+    "source": "expect5.45.4.tar.gz",
+    "recipe": "build/recipes/chapter08-expect.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/expect.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-dejagnu",
+    "source": "dejagnu-1.6.3.tar.gz",
+    "recipe": "build/recipes/chapter08-dejagnu.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/dejagnu.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-ninja",
+    "source": "ninja-1.13.2.tar.gz",
+    "recipe": "build/recipes/chapter08-ninja.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/ninja.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-pkgconf",
+    "source": "pkgconf-3.0.5.tar.xz",
+    "recipe": "build/recipes/chapter08-pkgconf.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/pkgconf.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-binutils",
+    "source": "binutils-2.47.tar.xz",
+    "recipe": "build/recipes/chapter08-binutils.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/binutils.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-gmp",
+    "source": "gmp-6.3.0.tar.xz",
+    "recipe": "build/recipes/chapter08-gmp.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/gmp.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-mpfr",
+    "source": "mpfr-4.2.2.tar.xz",
+    "recipe": "build/recipes/chapter08-mpfr.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/mpfr.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-mpc",
+    "source": "mpc-1.4.1.tar.xz",
+    "recipe": "build/recipes/chapter08-mpc.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/mpc.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-attr",
+    "source": "attr-2.6.0.tar.gz",
+    "recipe": "build/recipes/chapter08-attr.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/attr.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-acl",
+    "source": "acl-2.4.0.tar.xz",
+    "recipe": "build/recipes/chapter08-acl.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/acl.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-libcap",
+    "source": "libcap-2.78.tar.xz",
+    "recipe": "build/recipes/chapter08-libcap.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/libcap.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-libxcrypt",
+    "source": "libxcrypt-4.5.2.tar.xz",
+    "recipe": "build/recipes/chapter08-libxcrypt.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/libxcrypt.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-shadow",
+    "source": "shadow-4.20.2.tar.xz",
+    "recipe": "build/recipes/chapter08-shadow.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/shadow.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-gawk",
+    "source": "gawk-5.4.1.tar.xz",
+    "recipe": "build/recipes/chapter08-gawk.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/gawk.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-gcc",
+    "source": "gcc-16.2.0.tar.xz",
+    "recipe": "build/recipes/chapter08-gcc.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/gcc.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-ncurses",
+    "source": "ncurses-6.6.tar.gz",
+    "recipe": "build/recipes/chapter08-ncurses.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/ncurses.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-sed",
+    "source": "sed-4.10.tar.xz",
+    "recipe": "build/recipes/chapter08-sed.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/sed.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-psmisc",
+    "source": "psmisc-23.7.tar.xz",
+    "recipe": "build/recipes/chapter08-psmisc.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/psmisc.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-gettext",
+    "source": "gettext-1.0.tar.xz",
+    "recipe": "build/recipes/chapter08-gettext.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/gettext.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-bison",
+    "source": "bison-3.8.2.tar.xz",
+    "recipe": "build/recipes/chapter08-bison.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/bison.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-grep",
+    "source": "grep-3.12.tar.xz",
+    "recipe": "build/recipes/chapter08-grep.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/grep.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-bash",
+    "source": "bash-5.3.tar.gz",
+    "recipe": "build/recipes/chapter08-bash.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/bash.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-libtool",
+    "source": "libtool-2.6.2.tar.xz",
+    "recipe": "build/recipes/chapter08-libtool.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/libtool.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-gdbm",
+    "source": "gdbm-1.26.tar.gz",
+    "recipe": "build/recipes/chapter08-gdbm.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/gdbm.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-gperf",
+    "source": "gperf-3.3.tar.gz",
+    "recipe": "build/recipes/chapter08-gperf.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/gperf.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-expat",
+    "source": "expat-2.8.3.tar.xz",
+    "recipe": "build/recipes/chapter08-expat.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/expat.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-inetutils",
+    "source": "inetutils-2.8.tar.gz",
+    "recipe": "build/recipes/chapter08-inetutils.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/inetutils.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-less",
+    "source": "less-704.tar.gz",
+    "recipe": "build/recipes/chapter08-less.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/less.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-perl",
+    "source": "perl-5.44.0.tar.xz",
+    "recipe": "build/recipes/chapter08-perl.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/perl.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-autoconf",
+    "source": "autoconf-2.73.tar.xz",
+    "recipe": "build/recipes/chapter08-autoconf.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/autoconf.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-automake",
+    "source": "automake-1.18.1.tar.xz",
+    "recipe": "build/recipes/chapter08-automake.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/automake.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-openssl",
+    "source": "openssl-4.0.1.tar.gz",
+    "recipe": "build/recipes/chapter08-openssl.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/openssl.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-libelf",
+    "source": "elfutils-0.195.tar.bz2",
+    "recipe": "build/recipes/chapter08-libelf.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/libelf.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-libffi",
+    "source": "libffi-3.8.0.tar.gz",
+    "recipe": "build/recipes/chapter08-libffi.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/libffi.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-sqlite",
+    "source": "sqlite-autoconf-3530400.tar.gz",
+    "recipe": "build/recipes/chapter08-sqlite.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/sqlite.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-mpdecimal",
+    "source": "mpdecimal-4.0.1.tar.gz",
+    "recipe": "build/recipes/chapter08-mpdecimal.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/mpdecimal.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-Python",
+    "source": "Python-3.14.7.tar.xz",
+    "recipe": "build/recipes/chapter08-Python.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/Python.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-flit-core",
+    "source": "flit_core-4.0.2.tar.gz",
+    "recipe": "build/recipes/chapter08-flit-core.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/flit-core.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-packaging",
+    "source": "packaging-26.3.tar.gz",
+    "recipe": "build/recipes/chapter08-packaging.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/packaging.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-wheel",
+    "source": "wheel-0.48.0.tar.gz",
+    "recipe": "build/recipes/chapter08-wheel.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/wheel.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-setuptools",
+    "source": "setuptools-84.0.0.tar.gz",
+    "recipe": "build/recipes/chapter08-setuptools.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/setuptools.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-meson",
+    "source": "meson-1.12.0.tar.gz",
+    "recipe": "build/recipes/chapter08-meson.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/meson.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-kmod",
+    "source": "kmod-34.2.tar.xz",
+    "recipe": "build/recipes/chapter08-kmod.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/kmod.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-coreutils",
+    "source": "coreutils-9.11.tar.xz",
+    "recipe": "build/recipes/chapter08-coreutils.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/coreutils.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-diffutils",
+    "source": "diffutils-3.12.tar.xz",
+    "recipe": "build/recipes/chapter08-diffutils.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/diffutils.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-findutils",
+    "source": "findutils-4.11.0.tar.xz",
+    "recipe": "build/recipes/chapter08-findutils.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/findutils.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-groff",
+    "source": "groff-1.24.1.tar.gz",
+    "recipe": "build/recipes/chapter08-groff.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/groff.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-gzip",
+    "source": "gzip-1.14.tar.xz",
+    "recipe": "build/recipes/chapter08-gzip.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/gzip.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-iproute2",
+    "source": "iproute2-7.1.0.tar.xz",
+    "recipe": "build/recipes/chapter08-iproute2.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/iproute2.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-kbd",
+    "source": "kbd-2.10.0.tar.xz",
+    "recipe": "build/recipes/chapter08-kbd.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/kbd.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-libpipeline",
+    "source": "libpipeline-1.5.8.tar.gz",
+    "recipe": "build/recipes/chapter08-libpipeline.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/libpipeline.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-make",
+    "source": "make-4.4.1.tar.gz",
+    "recipe": "build/recipes/chapter08-make.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/make.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-patch",
+    "source": "patch-2.8.tar.xz",
+    "recipe": "build/recipes/chapter08-patch.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/patch.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-tar",
+    "source": "tar-1.35.tar.xz",
+    "recipe": "build/recipes/chapter08-tar.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/tar.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-texinfo",
+    "source": "texinfo-7.3.tar.xz",
+    "recipe": "build/recipes/chapter08-texinfo.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/texinfo.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-vim",
+    "source": "vim-9.2.1025.tar.gz",
+    "recipe": "build/recipes/chapter08-vim.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/vim.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-markupsafe",
+    "source": "markupsafe-3.0.3.tar.gz",
+    "recipe": "build/recipes/chapter08-markupsafe.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/markupsafe.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-jinja2",
+    "source": "jinja2-3.1.6.tar.gz",
+    "recipe": "build/recipes/chapter08-jinja2.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/jinja2.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-systemd",
+    "source": "systemd-261.2.tar.gz",
+    "recipe": "build/recipes/chapter08-systemd.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/systemd.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-dbus",
+    "source": "dbus-1.16.2.tar.xz",
+    "recipe": "build/recipes/chapter08-dbus.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/dbus.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-man-db",
+    "source": "man-db-2.13.1.tar.xz",
+    "recipe": "build/recipes/chapter08-man-db.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/man-db.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-procps-ng",
+    "source": "procps-ng-4.0.7.tar.xz",
+    "recipe": "build/recipes/chapter08-procps-ng.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/procps-ng.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-util-linux",
+    "source": "util-linux-2.42.2.tar.xz",
+    "recipe": "build/recipes/chapter08-util-linux.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/util-linux.html"
+  },
+  {
+    "stage": "03-chroot-base",
+    "id": "chapter08-e2fsprogs",
+    "source": "e2fsprogs-1.47.4.tar.gz",
+    "recipe": "build/recipes/chapter08-e2fsprogs.sh",
+    "book_url": "https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/e2fsprogs.html"
+  }
+]

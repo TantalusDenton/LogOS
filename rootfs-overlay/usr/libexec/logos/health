@@ -1,0 +1,157 @@
+#!/usr/bin/python3
+import json, os, pathlib, re, subprocess, sys, threading, time
+from logos_ai.config import read_config
+from logos_ai.inference import Client
+
+failed = []
+
+
+def check(name, fn):
+    try:
+        value = fn()
+        if value is False:
+            raise ValueError("condition not met")
+        print(f"{name:26} PASS", flush=True)
+        return value
+    except Exception as e:
+        failed.append(name)
+        print(f"{name:26} FAIL  {e}", flush=True)
+        return None
+
+
+def run(*args):
+    return subprocess.check_output(
+        args, stderr=subprocess.STDOUT, text=True, timeout=30
+    ).strip()
+
+
+def require(value):
+    if not value:
+        raise ValueError("required evidence missing")
+    return True
+
+
+print("LogOS Developer Preview 0.1")
+check("systemd", lambda: require(run("systemctl", "is-system-running") == "running"))
+check(
+    "network",
+    lambda: (
+        require("inet " in run("ip", "-4", "addr", "show", "eth0")),
+        run("ip", "route", "get", "1.1.1.1"),
+    ),
+)
+check(
+    "ping gateway",
+    lambda: run(
+        "ping",
+        "-c",
+        "1",
+        "-W",
+        "3",
+        json.loads(run("ip", "-j", "route", "show", "default"))[0]["gateway"],
+    ),
+)
+check("DNS", lambda: run("getent", "ahosts", "www.linuxfromscratch.org"))
+check(
+    "X11 socket",
+    lambda: require(
+        pathlib.Path("/tmp/.X11-unix/X" + os.getenv("DISPLAY", ":100")[1:]).is_socket()
+    ),
+)
+check("DISPLAY " + os.getenv("DISPLAY", ":100"), lambda: run("xdpyinfo"))
+check("xterm", lambda: run("pgrep", "-u", "logos", "-x", "xterm"))
+check(
+    "tmux", lambda: run("su", "-", "logos", "-c", "tmux -L logos has-session -t logos")
+)
+check("NVIDIA device", lambda: run("nvidia-smi"))
+check(
+    "Quadro M2000",
+    lambda: require(
+        "Quadro M2000" in run("nvidia-smi", "--query-gpu=name", "--format=csv,noheader")
+    ),
+)
+check(
+    "CUDA runtime",
+    lambda: require("release 12." in run("/opt/cuda-12.9/bin/nvcc", "--version")),
+)
+check("CUDA compute", lambda: run("/usr/libexec/logos/cuda-test"))
+check("llama.cpp", lambda: run("systemctl", "is-active", "logos-ai"))
+c = read_config()
+client = Client(c)
+check("model", lambda: require(pathlib.Path(c["MODEL"]).is_file()))
+samples = []
+stop = threading.Event()
+
+
+def monitor():
+    while not stop.is_set():
+        try:
+            samples.append(
+                run(
+                    "nvidia-smi",
+                    "--query-gpu=utilization.gpu,memory.used",
+                    "--format=csv,noheader,nounits",
+                )
+            )
+        except Exception:
+            pass
+        stop.wait(0.25)
+
+
+thread = threading.Thread(target=monitor, daemon=True)
+thread.start()
+reply = check(
+    "AI inference", lambda: client.ask("show me GPU usage", {"logos_version": "0.1"})
+)
+stop.set()
+thread.join(timeout=5)
+check(
+    "GPU command proposal",
+    lambda: require(
+        reply and any(x["command"].strip() == "nvidia-smi" for x in reply["commands"])
+    ),
+)
+
+
+def offload():
+    invocation = run("systemctl", "show", "logos-ai", "-p", "InvocationID", "--value")
+    require(bool(re.fullmatch("[a-f0-9]{32}", invocation)))
+    log = run(
+        "journalctl", "_SYSTEMD_INVOCATION_ID=" + invocation, "--no-pager", "-o", "cat"
+    )
+    layers = re.findall(r"offloaded\s+(\d+)/(\d+)\s+layers to GPU", log)
+    require(layers and int(layers[-1][0]) > 0)
+    require(re.search(r"CUDA\d+.*(?:model buffer|buffer size)", log, re.I))
+    require(reply is not None)
+    # Successful inference + CUDA model buffers + positive offloaded layer count
+    # from this exact live service invocation is definitive offload evidence.
+    print(
+        "  Offloaded layers: "
+        + "/".join(layers[-1])
+        + "; NVIDIA samples: "
+        + repr(samples[-5:])
+    )
+    return True
+
+
+check("GPU offload", offload)
+semantic = check(
+    "Semantic inference",
+    lambda: client.ask(
+        "find the ten largest files in my home directory",
+        {"working_directory": "/home/logos"},
+    ),
+)
+check(
+    "Home file proposal",
+    lambda: require(
+        semantic
+        and any(
+            "find " in x["command"]
+            and ("head" in x["command"] or "sort" in x["command"])
+            for x in semantic["commands"]
+        )
+    ),
+)
+check("LogOS AI Terminal", lambda: run("systemctl", "is-active", "logos-terminal"))
+raise SystemExit(bool(failed))

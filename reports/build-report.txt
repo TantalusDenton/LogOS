@@ -1,0 +1,13 @@
+LogOS Developer Preview 0.1 — INCOMPLETE
+Generated 2026-09-15T23:37:59.148277+00:00
+Successful distribution stages: none
+Failed build attempts: root privilege required before stage 01
+LFS/BLFS/CUDA/GCC-14/llama.cpp source verification: PASS
+Software tests: 28 PASS; real tmux approval test PASS; host Xephyr smoke PASS
+CUDA: 12.9.1 selected, installation and computation NOT TESTED
+GPU status: FAIL — host NVML driver/library mismatch
+llama.cpp commit: 38a5b42d9a3e82e0a586bcd1caed121f36c87a73
+Default model: Qwen2.5-Coder-1.5B-Instruct Q4_K_M; not downloaded
+Rootfs size: empty (not built)
+Deviations: docs/lfs-deviations.md
+Root access: awaiting user-shared root console

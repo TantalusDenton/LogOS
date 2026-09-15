@@ -1,0 +1,46 @@
+[
+  {
+    "name": "cuda_nvcc-linux-x86_64-12.9.86-archive.tar.xz",
+    "url": "https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvcc/linux-x86_64/cuda_nvcc-linux-x86_64-12.9.86-archive.tar.xz",
+    "checksum": "sha256:7a1a5b652e5ef85c82b721d10672fc9a2dbaab44e9bd3c65a69517bf53998c35",
+    "license": "CUDA Toolkit",
+    "component": "cuda_nvcc",
+    "version": "12.9.86"
+  },
+  {
+    "name": "cuda_cudart-linux-x86_64-12.9.79-archive.tar.xz",
+    "url": "https://developer.download.nvidia.com/compute/cuda/redist/cuda_cudart/linux-x86_64/cuda_cudart-linux-x86_64-12.9.79-archive.tar.xz",
+    "checksum": "sha256:1f6ad42d4f530b24bfa35894ccf6b7209d2354f59101fd62ec4a6192a184ce99",
+    "license": "CUDA Toolkit",
+    "component": "cuda_cudart",
+    "version": "12.9.79"
+  },
+  {
+    "name": "cuda_cccl-linux-x86_64-12.9.27-archive.tar.xz",
+    "url": "https://developer.download.nvidia.com/compute/cuda/redist/cuda_cccl/linux-x86_64/cuda_cccl-linux-x86_64-12.9.27-archive.tar.xz",
+    "checksum": "sha256:8b1a5095669e94f2f9afd7715533314d418179e9452be61e2fde4c82a3e542aa",
+    "license": "CUDA Toolkit",
+    "component": "cuda_cccl",
+    "version": "12.9.27"
+  },
+  {
+    "name": "libcublas-linux-x86_64-12.9.1.4-archive.tar.xz",
+    "url": "https://developer.download.nvidia.com/compute/cuda/redist/libcublas/linux-x86_64/libcublas-linux-x86_64-12.9.1.4-archive.tar.xz",
+    "checksum": "sha256:546addc4a9d82b8f23aa9ba9274b6bc0429a63008a31c759884ac24880796057",
+    "license": "CUDA Toolkit",
+    "component": "libcublas",
+    "version": "12.9.1.4"
+  },
+  {
+    "name": "gcc-14.3.0.tar.xz",
+    "url": "https://gcc.gnu.org/pub/gcc/releases/gcc-14.3.0/gcc-14.3.0.tar.xz",
+    "checksum": "sha512:cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93",
+    "license": "GPL-3.0-or-later with runtime exception"
+  },
+  {
+    "name": "llama.cpp.git",
+    "url": "https://github.com/ggml-org/llama.cpp.git",
+    "checksum": "git:38a5b42d9a3e82e0a586bcd1caed121f36c87a73",
+    "license": "MIT"
+  }
+]

@@ -1,0 +1,662 @@
+[
+  {
+    "name": "acl-2.4.0.tar.xz",
+    "url": "https://download.savannah.gnu.org/releases/acl/acl-2.4.0.tar.xz",
+    "checksum": "md5:e289f370161698a96f50b2a3fdadf411",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "attr-2.6.0.tar.gz",
+    "url": "https://download.savannah.gnu.org/releases/attr/attr-2.6.0.tar.gz",
+    "checksum": "md5:910a09c3ae0a211569d180586371cf7e",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "autoconf-2.73.tar.xz",
+    "url": "https://ftpmirror.gnu.org/autoconf/autoconf-2.73.tar.xz",
+    "checksum": "md5:9cbad9a116ef845bafeed8e7bc771bf4",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "automake-1.18.1.tar.xz",
+    "url": "https://ftpmirror.gnu.org/automake/automake-1.18.1.tar.xz",
+    "checksum": "md5:cea31dbf1120f890cbf2a3032cfb9a68",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "bash-5.3.tar.gz",
+    "url": "https://ftpmirror.gnu.org/bash/bash-5.3.tar.gz",
+    "checksum": "md5:977c8c0c5ae6309191e7768e28ebc951",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "bc-7.0.3.tar.xz",
+    "url": "https://github.com/gavinhoward/bc/releases/download/7.0.3/bc-7.0.3.tar.xz",
+    "checksum": "md5:ad4db5a0eb4fdbb3f6813be4b6b3da74",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "binutils-2.47.tar.xz",
+    "url": "https://sourceware.org/pub/binutils/releases/binutils-2.47.tar.xz",
+    "checksum": "md5:d772acfbd55a81644e9fe7b8189cd2a5",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "bison-3.8.2.tar.xz",
+    "url": "https://ftpmirror.gnu.org/bison/bison-3.8.2.tar.xz",
+    "checksum": "md5:c28f119f405a2304ff0a7ccdcc629713",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "bzip2-1.0.8.tar.gz",
+    "url": "https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+    "checksum": "md5:67e051268d0c475ea773822f7500d0e5",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "coreutils-9.11.tar.xz",
+    "url": "https://ftpmirror.gnu.org/coreutils/coreutils-9.11.tar.xz",
+    "checksum": "md5:e52e9857e4aa9ae38ef32f8ed6a27604",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "dbus-1.16.2.tar.xz",
+    "url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz",
+    "checksum": "md5:97832e6f0a260936d28536e5349c22e5",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "dejagnu-1.6.3.tar.gz",
+    "url": "https://ftpmirror.gnu.org/dejagnu/dejagnu-1.6.3.tar.gz",
+    "checksum": "md5:68c5208c58236eba447d7d6d1326b821",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "diffutils-3.12.tar.xz",
+    "url": "https://ftpmirror.gnu.org/diffutils/diffutils-3.12.tar.xz",
+    "checksum": "md5:d1b18b20868fb561f77861cd90b05de4",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "e2fsprogs-1.47.4.tar.gz",
+    "url": "https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.4/e2fsprogs-1.47.4.tar.gz",
+    "checksum": "md5:733a93bc688314834ff2d10530ff4dc4",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "elfutils-0.195.tar.bz2",
+    "url": "https://sourceware.org/ftp/elfutils/0.195/elfutils-0.195.tar.bz2",
+    "checksum": "md5:3e8ef51c43beceddbbb74879549cf72c",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "expat-2.8.3.tar.xz",
+    "url": "https://github.com/libexpat/libexpat/releases/download/R_2_8_3/expat-2.8.3.tar.xz",
+    "checksum": "md5:1747f5a57b191f0373baeb5adc8078ca",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "expect5.45.4.tar.gz",
+    "url": "https://prdownloads.sourceforge.net/expect/expect5.45.4.tar.gz",
+    "checksum": "md5:00fce8de158422f5ccd2666512329bd2",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "file-5.48.tar.gz",
+    "url": "https://astron.com/pub/file/file-5.48.tar.gz",
+    "checksum": "md5:423686e97f731d8c24e9cd1a22b03dec",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "findutils-4.11.0.tar.xz",
+    "url": "https://ftpmirror.gnu.org/findutils/findutils-4.11.0.tar.xz",
+    "checksum": "md5:512c6875ed84034dca240c4bc9380b96",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "flex-2.6.4.tar.gz",
+    "url": "https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz",
+    "checksum": "md5:2882e3179748cc9f9c23ec593d6adc8d",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "flit_core-4.0.2.tar.gz",
+    "url": "https://pypi.org/packages/source/f/flit-core/flit_core-4.0.2.tar.gz",
+    "checksum": "md5:89ebb783230fc8db6c1d2a39644b7085",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "gawk-5.4.1.tar.xz",
+    "url": "https://ftpmirror.gnu.org/gawk/gawk-5.4.1.tar.xz",
+    "checksum": "md5:d379c2110e7a3e15347dd5559a41ad64",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "gcc-16.2.0.tar.xz",
+    "url": "https://ftpmirror.gnu.org/gcc/gcc-16.2.0/gcc-16.2.0.tar.xz",
+    "checksum": "md5:19b777fb19ea4982731392481306f0d3",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "gdbm-1.26.tar.gz",
+    "url": "https://ftpmirror.gnu.org/gdbm/gdbm-1.26.tar.gz",
+    "checksum": "md5:aaa600665bc89e2febb3c7bd90679115",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "gettext-1.0.tar.xz",
+    "url": "https://ftpmirror.gnu.org/gettext/gettext-1.0.tar.xz",
+    "checksum": "md5:dc8b2911535929cec1e263706b0a13a1",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "glibc-2.44.tar.xz",
+    "url": "https://ftpmirror.gnu.org/glibc/glibc-2.44.tar.xz",
+    "checksum": "md5:7677da43ef759c68e005f5d4c37986a6",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "gmp-6.3.0.tar.xz",
+    "url": "https://ftpmirror.gnu.org/gmp/gmp-6.3.0.tar.xz",
+    "checksum": "md5:956dc04e864001a9c22429f761f2c283",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "gperf-3.3.tar.gz",
+    "url": "https://ftpmirror.gnu.org/gperf/gperf-3.3.tar.gz",
+    "checksum": "md5:31753b021ea78a21f154bf9eecb8b079",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "grep-3.12.tar.xz",
+    "url": "https://ftpmirror.gnu.org/grep/grep-3.12.tar.xz",
+    "checksum": "md5:5d9301ed9d209c4a88c8d3a6fd08b9ac",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "groff-1.24.1.tar.gz",
+    "url": "https://ftpmirror.gnu.org/groff/groff-1.24.1.tar.gz",
+    "checksum": "md5:d9d996af3d05ebab934380be708ea584",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "grub-2.14.tar.xz",
+    "url": "https://ftpmirror.gnu.org/grub/grub-2.14.tar.xz",
+    "checksum": "md5:383f9effad01c235d2535357ff717543",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "gzip-1.14.tar.xz",
+    "url": "https://ftpmirror.gnu.org/gzip/gzip-1.14.tar.xz",
+    "checksum": "md5:4bf5a10f287501ee8e8ebe00ef62b2c2",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "iana-etc-20260805.tar.gz",
+    "url": "https://github.com/Mic92/iana-etc/releases/download/20260805/iana-etc-20260805.tar.gz",
+    "checksum": "md5:f6d2619cfac3a68f91392e28fe4067c3",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "inetutils-2.8.tar.gz",
+    "url": "https://ftpmirror.gnu.org/inetutils/inetutils-2.8.tar.gz",
+    "checksum": "md5:f0f9ad13045a67da9c882148f9efae6b",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "iproute2-7.1.0.tar.xz",
+    "url": "https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-7.1.0.tar.xz",
+    "checksum": "md5:4f322144fb9a0877c5f9ef71b2f11180",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "jinja2-3.1.6.tar.gz",
+    "url": "https://pypi.org/packages/source/J/Jinja2/jinja2-3.1.6.tar.gz",
+    "checksum": "md5:66d4c25ff43d1deaf9637ccda523dec8",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "kbd-2.10.0.tar.xz",
+    "url": "https://www.kernel.org/pub/linux/utils/kbd/kbd-2.10.0.tar.xz",
+    "checksum": "md5:77ff950dfa4c34fdf41125547bfa831a",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "kmod-34.2.tar.xz",
+    "url": "https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.2.tar.xz",
+    "checksum": "md5:36f2cc483745e81ede3406fa55e1065a",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "less-704.tar.gz",
+    "url": "https://www.greenwoodsoftware.com/less/less-704.tar.gz",
+    "checksum": "md5:c4c9eea5b1862783b078c67ca67c9185",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "libcap-2.78.tar.xz",
+    "url": "https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.78.tar.xz",
+    "checksum": "md5:0ff11419aa4813c0a0f84fe67bf3b39e",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "libffi-3.8.0.tar.gz",
+    "url": "https://github.com/libffi/libffi/releases/download/v3.8.0/libffi-3.8.0.tar.gz",
+    "checksum": "md5:96fe46f2a7bb82559b35a268a2c000ba",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "libpipeline-1.5.8.tar.gz",
+    "url": "https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.8.tar.gz",
+    "checksum": "md5:17ac6969b2015386bcb5d278a08a40b5",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "libtool-2.6.2.tar.xz",
+    "url": "https://ftpmirror.gnu.org/libtool/libtool-2.6.2.tar.xz",
+    "checksum": "md5:87743862e6cabfb9e76651bc64e31e5c",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "libxcrypt-4.5.2.tar.xz",
+    "url": "https://github.com/besser82/libxcrypt/releases/download/v4.5.2/libxcrypt-4.5.2.tar.xz",
+    "checksum": "md5:25e888919ddcd153a07daa95224fa436",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "linux-7.1.8.tar.xz",
+    "url": "https://www.kernel.org/pub/linux/kernel/v7.x/linux-7.1.8.tar.xz",
+    "checksum": "md5:807584f564568b40162e9e4a72bf191f",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "lz4-1.10.0.tar.gz",
+    "url": "https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz",
+    "checksum": "md5:dead9f5f1966d9ae56e1e32761e4e675",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "m4-1.4.21.tar.xz",
+    "url": "https://ftpmirror.gnu.org/m4/m4-1.4.21.tar.xz",
+    "checksum": "md5:8051eef7239b2f187791f2ab0034d6b7",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "make-4.4.1.tar.gz",
+    "url": "https://ftpmirror.gnu.org/make/make-4.4.1.tar.gz",
+    "checksum": "md5:c8469a3713cbbe04d955d4ae4be23eeb",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "man-db-2.13.1.tar.xz",
+    "url": "https://download.savannah.gnu.org/releases/man-db/man-db-2.13.1.tar.xz",
+    "checksum": "md5:b6335533cbeac3b24cd7be31fdee8c83",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "man-pages-6.18.tar.xz",
+    "url": "https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.18.tar.xz",
+    "checksum": "md5:44915a91e4a28161dc421636a193fb3a",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "markupsafe-3.0.3.tar.gz",
+    "url": "https://pypi.org/packages/source/M/MarkupSafe/markupsafe-3.0.3.tar.gz",
+    "checksum": "md5:13a73126d25afa72a1ff0daed072f5fe",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "meson-1.12.0.tar.gz",
+    "url": "https://github.com/mesonbuild/meson/releases/download/1.12.0/meson-1.12.0.tar.gz",
+    "checksum": "md5:9f943c267d63016012efcb0f31ecdd7d",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "mpc-1.4.1.tar.xz",
+    "url": "https://ftp.gnu.org/gnu/mpc/mpc-1.4.1.tar.xz",
+    "checksum": "md5:40c5fba305125279ea46041160e81daf",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd",
+    "book_url": "https://ftpmirror.gnu.org/mpc/mpc-1.4.1.tar.xz"
+  },
+  {
+    "name": "mpdecimal-4.0.1.tar.gz",
+    "url": "https://www.bytereef.org/software/mpdecimal/releases/mpdecimal-4.0.1.tar.gz",
+    "checksum": "md5:3d4412579b1edc1047efab151889cca9",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "mpfr-4.2.2.tar.xz",
+    "url": "https://ftpmirror.gnu.org/mpfr/mpfr-4.2.2.tar.xz",
+    "checksum": "md5:7c32c39b8b6e3ae85f25156228156061",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "ncurses-6.6.tar.gz",
+    "url": "https://invisible-mirror.net/archives/ncurses/ncurses-6.6.tar.gz",
+    "checksum": "md5:dd45bf6854430af403452a7a6a40652c",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "ninja-1.13.2.tar.gz",
+    "url": "https://github.com/ninja-build/ninja/archive/v1.13.2/ninja-1.13.2.tar.gz",
+    "checksum": "md5:76c00637fde44909cd7d56f8d73f2042",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "openssl-4.0.1.tar.gz",
+    "url": "https://github.com/openssl/openssl/releases/download/openssl-4.0.1/openssl-4.0.1.tar.gz",
+    "checksum": "md5:07e316afe26b61e72206b81706b497bb",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "packaging-26.3.tar.gz",
+    "url": "https://files.pythonhosted.org/packages/source/p/packaging/packaging-26.3.tar.gz",
+    "checksum": "md5:c6809ec56986682ceffe573b8778a1ce",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "patch-2.8.tar.xz",
+    "url": "https://ftp.gnu.org/gnu/patch/patch-2.8.tar.xz",
+    "checksum": "md5:149327a021d41c8f88d034eab41c039f",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd",
+    "book_url": "https://ftpmirror.gnu.org/patch/patch-2.8.tar.xz"
+  },
+  {
+    "name": "pcre2-10.47.tar.bz2",
+    "url": "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.47/pcre2-10.47.tar.bz2",
+    "checksum": "md5:aded5840ab5a7d772dd4e16fc294b665",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "perl-5.44.0.tar.xz",
+    "url": "https://www.cpan.org/src/5.0/perl-5.44.0.tar.xz",
+    "checksum": "md5:55761cf1543af326492fd194647796d1",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "pkgconf-3.0.5.tar.xz",
+    "url": "https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.5.tar.xz",
+    "checksum": "md5:18c528161e6b04ae36dc981af8c4d97e",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "procps-ng-4.0.7.tar.xz",
+    "url": "https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.7.tar.xz",
+    "checksum": "md5:d47bdda51c4bd595a1ab21b8e538bcb3",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "psmisc-23.7.tar.xz",
+    "url": "https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz",
+    "checksum": "md5:53eae841735189a896d614cba440eb10",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "Python-3.14.7.tar.xz",
+    "url": "https://www.python.org/ftp/python/3.14.7/Python-3.14.7.tar.xz",
+    "checksum": "md5:a4c4c2991b4126e227073c2d9445f432",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "python-3.14.7-docs-html.tar.bz2",
+    "url": "https://www.python.org/ftp/python/doc/3.14.7/python-3.14.7-docs-html.tar.bz2",
+    "checksum": "md5:bdf55dddc02a76961d61730f06d18849",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "readline-8.3.tar.gz",
+    "url": "https://ftpmirror.gnu.org/readline/readline-8.3.tar.gz",
+    "checksum": "md5:25a73bfb2a3ad7146c5e9d4408d9f6cd",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "sed-4.10.tar.xz",
+    "url": "https://ftpmirror.gnu.org/sed/sed-4.10.tar.xz",
+    "checksum": "md5:c70dc5372db95c816442ffedf77a0d0f",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "setuptools-84.0.0.tar.gz",
+    "url": "https://pypi.org/packages/source/s/setuptools/setuptools-84.0.0.tar.gz",
+    "checksum": "md5:c6919a4b0862ca30604559e163a6cce9",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "shadow-4.20.2.tar.xz",
+    "url": "https://github.com/shadow-maint/shadow/releases/download/4.20.2/shadow-4.20.2.tar.xz",
+    "checksum": "md5:f52e717bd330818c67bd57c897ec5a8e",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "sqlite-autoconf-3530400.tar.gz",
+    "url": "https://sqlite.org/2026/sqlite-autoconf-3530400.tar.gz",
+    "checksum": "md5:ee54db5a5b04e77d4883ce0c051a1eba",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "sqlite-doc-3530400.zip",
+    "url": "https://sqlite.org/2026/sqlite-doc-3530400.zip",
+    "checksum": "md5:2cd5b168d0e5c5ae2b99beb3a4269a73",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "systemd-261.2.tar.gz",
+    "url": "https://github.com/systemd/systemd/archive/v261.2/systemd-261.2.tar.gz",
+    "checksum": "md5:e3f04ccc83a28ec5e80c5432bb8329f5",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "systemd-man-pages-261.2.tar.xz",
+    "url": "https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-261.2.tar.xz",
+    "checksum": "md5:4c5533c1a2d0921dd4c5b5e6b8902570",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "tar-1.35.tar.xz",
+    "url": "https://ftpmirror.gnu.org/tar/tar-1.35.tar.xz",
+    "checksum": "md5:a2d8042658cfd8ea939e6d911eaf4152",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "tcl8.6.18-src.tar.gz",
+    "url": "https://downloads.sourceforge.net/tcl/tcl8.6.18-src.tar.gz",
+    "checksum": "md5:acfe0c9f7d0c626ecf026e834a888da6",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "tcl8.6.18-html.tar.gz",
+    "url": "https://downloads.sourceforge.net/tcl/tcl8.6.18-html.tar.gz",
+    "checksum": "md5:54d1ff0f5eee4e81e5cdaa4baa343397",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "texinfo-7.3.tar.xz",
+    "url": "https://ftpmirror.gnu.org/texinfo/texinfo-7.3.tar.xz",
+    "checksum": "md5:915a09fcdfc2bf0f5ecf9e556d5698ff",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "tzdata2026c.tar.gz",
+    "url": "https://www.iana.org/time-zones/repository/releases/tzdata2026c.tar.gz",
+    "checksum": "md5:bff7174205cefab793e3b24271ef2f45",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "util-linux-2.42.2.tar.xz",
+    "url": "https://www.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.2.tar.xz",
+    "checksum": "md5:1d70131b70abda3dec3b37e282a20c96",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "vim-9.2.1025.tar.gz",
+    "url": "https://github.com/vim/vim/archive/v9.2.1025/vim-9.2.1025.tar.gz",
+    "checksum": "md5:060c9c0d7e2bdb5e5d80daad596cae02",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "wheel-0.48.0.tar.gz",
+    "url": "https://pypi.org/packages/source/w/wheel/wheel-0.48.0.tar.gz",
+    "checksum": "md5:f668e4885de814378b332eceea04a8a0",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "xz-5.8.3.tar.xz",
+    "url": "https://github.com//tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.xz",
+    "checksum": "md5:a02753f34e5546d20213b87f876a0933",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "zlib-1.3.2.tar.gz",
+    "url": "https://zlib.net/fossils/zlib-1.3.2.tar.gz",
+    "checksum": "md5:a1e6c958597af3c67d162995a342138a",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "zstd-1.5.7.tar.gz",
+    "url": "https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz",
+    "checksum": "md5:780fc1896922b1bc52a4e90980cdda48",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "bzip2-1.0.8-install_docs-1.patch",
+    "url": "https://www.linuxfromscratch.org/patches/lfs/13.1/bzip2-1.0.8-install_docs-1.patch",
+    "checksum": "md5:6a5ac7e89b791aae556de0f745916f7f",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "coreutils-9.11-i18n-1.patch",
+    "url": "https://www.linuxfromscratch.org/patches/lfs/13.1/coreutils-9.11-i18n-1.patch",
+    "checksum": "md5:900d64d9936516b68613271c9ebc0059",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "expect-5.45.4-gcc15-1.patch",
+    "url": "https://www.linuxfromscratch.org/patches/lfs/13.1/expect-5.45.4-gcc15-1.patch",
+    "checksum": "md5:0ca4d6bb8d572fbcdb13cb36cd34833e",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "glibc-2.44-upstream_fixes-1.patch",
+    "url": "https://www.linuxfromscratch.org/patches/lfs/13.1/glibc-2.44-upstream_fixes-1.patch",
+    "checksum": "md5:990574184b25aa3029a2444e81865098",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "glibc-fhs-1.patch",
+    "url": "https://www.linuxfromscratch.org/patches/lfs/13.1/glibc-fhs-1.patch",
+    "checksum": "md5:9a5997c3452909b1769918c759eff8a2",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "kbd-2.10.0-backspace-1.patch",
+    "url": "https://www.linuxfromscratch.org/patches/lfs/13.1/kbd-2.10.0-backspace-1.patch",
+    "checksum": "md5:f75cca16a38da6caa7d52151f7136895",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "Python-3.14.7-openssl_4-1.patch",
+    "url": "https://www.linuxfromscratch.org/patches/lfs/13.1/Python-3.14.7-openssl_4-1.patch",
+    "checksum": "md5:597d7737df1b4ea4e184c193da523050",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  },
+  {
+    "name": "tar-1.35-acl_fix-1.patch",
+    "url": "https://www.linuxfromscratch.org/patches/lfs/13.1/tar-1.35-acl_fix-1.patch",
+    "checksum": "md5:dbab49e317105539611866dac5dd54f6",
+    "license": "See upstream source",
+    "book": "LFS 13.1 systemd"
+  }
+]

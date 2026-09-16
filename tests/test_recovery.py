@@ -18,6 +18,7 @@ def load(name, filename):
 
 resume = load('resume', 'check-resume.py')
 glibc = load('glibc', 'verify-glibc-tests.py')
+binutils = load('binutils', 'verify-binutils-tests.py')
 
 class Recovery(unittest.TestCase):
     def setUp(self):
@@ -75,6 +76,24 @@ class Recovery(unittest.TestCase):
         (self.root / 'io/tst-lchmod.out').write_text('segmentation fault')
         with self.assertRaises(ValueError):
             glibc.verify(p, 0)
+
+    def test_binutils_rejects_additional_failures_and_stale_suites(self):
+        suites = ('binutils/binutils.sum', 'libsframe/libsframe.sum',
+                  'gas/testsuite/gas.sum', 'gprofng/gprofng.sum',
+                  'libctf/libctf.sum', 'ld/ld.sum')
+        for name in suites:
+            p = self.root / name
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text('PASS: example\n=== test Summary ===\n# of expected passes 1\n')
+        (self.root / 'gprofng/gprofng.sum').write_text('FAIL: tmpdir/gp-gmon\n=== gprofng Summary ===\n# of expected passes 5\n')
+        (self.root / 'gprofng/gprofng.log').write_text('No calltree for test\n')
+        binutils.verify(self.root, 0, 2)
+        with self.assertRaises(ValueError):
+            binutils.verify(self.root, 99999999999, 2)
+        with (self.root / 'ld/ld.sum').open('a') as f:
+            f.write('FAIL: unexpected linker defect\n')
+        with self.assertRaises(ValueError):
+            binutils.verify(self.root, 0, 2)
 
 if __name__ == '__main__':
     unittest.main()

@@ -5,8 +5,6 @@ set +h
 umask 022
 set -e
 set -o pipefail
-ABI=32 ./configure ...
-
 sed -i '/long long t1;/,+1s/()/(...)/' configure
 
 ./configure --prefix=/usr    \

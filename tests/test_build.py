@@ -62,7 +62,7 @@ class Build(unittest.TestCase):
 
     def test_no_unresolved_book_placeholders(self):
         for p in (ROOT / "build/recipes").glob("*.sh"):
-            for marker in ["<xxx>", "<paper_size>", "<your", "tzselect", "passwd root"]:
+            for marker in ["<xxx>", "<paper_size>", "<your", "tzselect", "passwd root", "./configure ..."]:
                 self.assertNotIn(marker, p.read_text(), p)
 
     def test_cuda_pin(self):

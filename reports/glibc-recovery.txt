@@ -31,3 +31,7 @@ protection of completed recipes, source locks and installed overlays.
 Full glibc source rebuild and complete test suite restarted at 07:32:47 UTC.
 The outcome of that run is in .work/build/logs and state/history.tsv; this
 recovery note does not claim a complete rootfs or GPU validation.
+
+Full fresh rerun completed successfully at 07:50:50 UTC with the documented
+lchmod exception. The stage then installed 17 additional packages before
+stopping on the separately documented gprofng test in final Binutils.

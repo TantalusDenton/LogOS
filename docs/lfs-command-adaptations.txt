@@ -8,3 +8,4 @@ chapter08/glibc.html: Select fresh install, test locales, and UTC; omit upgrade-
 chapter08/shadow.html: lock root password; LXD exec manages access.
 chapter08/bash.html: Each recipe starts a fresh noninteractive Bash process. Omitted: exec /usr/bin/bash --login
 chapter08/systemd.html: empty machine-id for unique container instances.
+chapter08/gmp: omit ABI=32 ./configure ... from the book's conditional 32-bit x86 note; this target is x86_64 and the command is illustrative, not part of the 64-bit recipe.

@@ -5,4 +5,5 @@ need_root
 [[ -f $LOGOS_BUILD/.logos-workspace && $(cat "$LOGOS_BUILD/.logos-workspace") = "$LOGOS_BUILD" ]] || fail 'Not a marked LogOS workspace'
 exec 9>"$LOGOS_BUILD/state/build.lock"
 flock -n 9 || fail 'Build is active'
-find "$LOGOS_BUILD/work" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
+[[ $(realpath "$LOGOS_BUILD/work") == "$LFS/sources" ]] || fail 'Unexpected work directory target'
+find -H "$LOGOS_BUILD/work" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +

@@ -22,9 +22,10 @@ cd       build
 
 make tooldir=/usr
 
-make -k check
-
-if grep '^FAIL:' $(find -name '*.log'); then exit 1; fi
+test_started=$(date +%s)
+test_status=0
+make -k check || test_status=$?
+python3 /logos-build/build/verify-binutils-tests.py . "$test_started" "$test_status"
 
 make tooldir=/usr install
 

@@ -1,0 +1,16 @@
+Binutils 2.47 recovery — 2026-09-16
+The sole unexpected test was gprofng tmpdir/gp-gmon: "No calltree" in gprofng.log.
+LFS 13.1 explicitly documents one known gprofng test failure.
+https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/binutils.html
+
+Observed suite summaries:
+  binutils: 351 expected passes, no unexpected failures
+  libsframe: 168 expected passes, no unexpected failures
+  gas: 2098 expected passes, no unexpected failures
+  gprofng: 5 expected passes, 1 unexpected failure, 1 unsupported
+  libctf: 40 expected passes, no unexpected failures
+  ld: 3304 expected passes, 59 expected failures, no unexpected failures
+
+The verifier requires fresh complete summaries from all six suites and accepts
+only the exact gp-gmon failure with its No calltree diagnostic. No component
+or test suite was disabled. Full rebuild/test restarted after this diagnosis.

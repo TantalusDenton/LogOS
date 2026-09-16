@@ -16,6 +16,8 @@ tar -C "$metadata" -cJf "$LOGOS_BUILD/artifacts/cuda-check-metadata.tar.xz" meta
 "$REPO/build/package-rootfs.sh" --cuda-check
 lxc image import "$LOGOS_BUILD/artifacts/cuda-check-metadata.tar.xz" "$LOGOS_BUILD/artifacts/cuda-check-rootfs.tar.xz" --alias "$alias"
 export LOGOS_CONTAINER=$name LOGOS_IMAGE=$alias
+# Honor the same configured pool/network/limits as the normal host wrappers.
+export LOGOS_STORAGE LOGOS_NETWORK LOGOS_CPUS LOGOS_MEMORY LOGOS_DISPLAY LOGOS_SCREEN LOGOS_DISK_SIZE
 python3 "$REPO/host/control.py" create
 lxc start "$name"
 lxc exec "$name" -- ldconfig

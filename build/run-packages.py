@@ -12,6 +12,26 @@ def call(args, **kw):
     subprocess.run(args, check=True, **kw)
 
 
+def save_test_results(package_dir, package_id):
+    target = BUILD / 'logs' / 'tests' / package_id
+    for path in package_dir.rglob('*'):
+        if not path.is_file() or not (path.suffix == '.sum' or path.name in
+                ('test-suite.log', 'testlog.txt', 'LastTest.log')):
+            continue
+        dest = target / path.relative_to(package_dir)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(path, dest)
+        if path.name == 'tests.sum':
+            for line in path.read_text().splitlines():
+                if line.startswith(('FAIL:', 'XPASS:', 'ERROR:')):
+                    name = line.split(':', 1)[1].strip() + '.out'
+                    src = path.parent / name
+                    if src.is_file() and '..' not in pathlib.PurePosixPath(name).parts:
+                        out = dest.parent / name
+                        out.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(src, out)
+
+
 def chroot(args):
     return [
         "chroot",
@@ -157,6 +177,9 @@ def main(stage):
             with open(BUILD / "state/history.tsv", "a") as f:
                 f.write(f'{time.time()}\t{p["id"]}\tFAILED\n')
             raise
+        finally:
+            if source:
+                save_test_results(package_dir, p['id'])
         marker.write_text(fingerprint + "\n")
         with open(BUILD / "state/history.tsv", "a") as f:
             f.write(f'{time.time()}\t{p["id"]}\tPASS\t{time.time()-start:.0f}s\n')

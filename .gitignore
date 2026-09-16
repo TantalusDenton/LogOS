@@ -5,3 +5,8 @@ config/logos.conf
 *.part
 *.tar.*
 config/*.sudoers
+# Live local build logs can be large; summarized validation is tracked in docs/.
+reports/build-root-console.log
+reports/build-root-console.exit
+reports/glibc-retest.log
+reports/glibc-first-tests.sum

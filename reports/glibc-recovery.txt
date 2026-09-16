@@ -1,0 +1,33 @@
+LogOS build recovery — 2026-09-16
+
+Original build stopped in chapter08-glibc: make check exited 2.
+Stage 01 cross toolchain and stage 02 temporary system completed successfully.
+Original tests: 14 FAIL, 6748 PASS, 597 UNSUPPORTED, 16 XFAIL.
+
+Root cause reproduced:
+  chroot; cd /sources/glibc-2.44/build;
+  env -i PATH=/usr/bin:/usr/sbin /bin/bash -c 'pwd -P'
+failed with "getcwd: cannot access parent directories" when /sources was a
+same-filesystem bind mount. The same command worked in /tmp. Temporary Bash's
+cross-build fallback compares readdir inode numbers and cannot traverse that
+bind mount. No compiler or Bash flags were changed.
+
+Moved the physical work tree to rootfs/sources, keeping work as a symlink and
+the download cache separate. The exact probe then succeeded in /sources and
+the glibc build directory, with no shell-init diagnostic.
+
+Reran failing tests through make check:
+  1 FAIL, 6761 PASS, 597 UNSUPPORTED, 16 XFAIL.
+Remaining FAIL: io/tst-lchmod. Its descriptor 1 changes from a chroot-relative
+path to the host path after the test leaves the chroot. This is the failure
+explicitly documented at:
+https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/glibc.html
+
+Added a narrow verifier for that diagnostic and a fresh complete test summary.
+Unexpected failures, stale summaries and different lchmod diagnostics still fail.
+Nine build/recovery tests passed, including the negative cases above and
+protection of completed recipes, source locks and installed overlays.
+
+Full glibc source rebuild and complete test suite restarted at 07:32:47 UTC.
+The outcome of that run is in .work/build/logs and state/history.tsv; this
+recovery note does not claim a complete rootfs or GPU validation.

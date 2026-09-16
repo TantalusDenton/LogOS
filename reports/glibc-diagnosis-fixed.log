@@ -1,0 +1,100 @@
++ cd /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS
++ source build/lib/common.sh
+++ set -Eeuo pipefail
+++++ dirname -- build/lib/common.sh
++++ cd -- build/lib/../..
++++ pwd -P
+++ REPO=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS
+++ [[ -f /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/config/logos.conf ]]
+++ source /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/config/logos.conf
++++ LOGOS_BUILD=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build
++++ JOBS=8
++++ MIN_FREE_GIB=80
++++ RESERVE_GIB=20
++++ LOGOS_CONTAINER=logos-dev
++++ LOGOS_IMAGE=logos/0.1
++++ LOGOS_CPUS=8
++++ LOGOS_MEMORY=16GiB
++++ LOGOS_DISPLAY=:100
++++ LOGOS_SCREEN=1600x900
++++ LOGOS_NETWORK=lxdbr0
++++ LOGOS_STORAGE=goldenfir
+++ : /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build
+++ : 8
+++ : 80
+++ : 20
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build = /* ]]
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build != / ]]
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build != /usr ]]
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build != /home ]]
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build != *[[:space:]]* ]]
++++ realpath -m /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build
+++ LOGOS_BUILD=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build
+++ export LOGOS_BUILD LFS=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs JOBS RESERVE_GIB
+++ LFS=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs
+++ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin
+++ PATH=/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin
+++ export LC_ALL=C.UTF-8
+++ LC_ALL=C.UTF-8
++ [[ 0 != 1 ]]
++ exec unshare --mount --propagation private env LOGOS_DIAG_NAMESPACE=1 bash .work/session/diagnose-glibc.sh
++ cd /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS
++ source build/lib/common.sh
+++ set -Eeuo pipefail
+++++ dirname -- build/lib/common.sh
++++ cd -- build/lib/../..
++++ pwd -P
+++ REPO=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS
+++ [[ -f /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/config/logos.conf ]]
+++ source /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/config/logos.conf
++++ LOGOS_BUILD=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build
++++ JOBS=8
++++ MIN_FREE_GIB=80
++++ RESERVE_GIB=20
++++ LOGOS_CONTAINER=logos-dev
++++ LOGOS_IMAGE=logos/0.1
++++ LOGOS_CPUS=8
++++ LOGOS_MEMORY=16GiB
++++ LOGOS_DISPLAY=:100
++++ LOGOS_SCREEN=1600x900
++++ LOGOS_NETWORK=lxdbr0
++++ LOGOS_STORAGE=goldenfir
+++ : /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build
+++ : 8
+++ : 80
+++ : 20
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build = /* ]]
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build != / ]]
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build != /usr ]]
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build != /home ]]
+++ [[ /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build != *[[:space:]]* ]]
++++ realpath -m /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build
+++ LOGOS_BUILD=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build
+++ export LOGOS_BUILD LFS=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs JOBS RESERVE_GIB
+++ LFS=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs
+++ export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin
+++ PATH=/usr/bin:/usr/sbin:/bin:/sbin:/snap/bin
+++ export LC_ALL=C.UTF-8
+++ LC_ALL=C.UTF-8
++ [[ 1 != 1 ]]
++ mount --rbind /dev /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs/dev
++ mount --make-rslave /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs/dev
++ mount -t proc proc /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs/proc
++ chroot /mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs /usr/bin/env -i HOME=/root PATH=/usr/bin:/usr/sbin /bin/bash --noprofile --norc -c '
+cd /sources/glibc-2.44/build
+/bin/pwd
+/bin/bash -c "pwd -P"
+/usr/bin/env -i PATH=/usr/bin:/usr/sbin /bin/bash -c "pwd -P"
+/usr/bin/python3 -c "import os; print(os.getcwd())"
+cd /tmp
+/usr/bin/env -i PATH=/usr/bin:/usr/sbin /bin/bash -c "pwd -P"
+cd /sources
+/usr/bin/env -i PATH=/usr/bin:/usr/sbin /bin/bash -c "pwd -P"
+
+'
+/sources/glibc-2.44/build
+/sources/glibc-2.44/build
+/sources/glibc-2.44/build
+/sources/glibc-2.44/build
+/tmp
+/sources

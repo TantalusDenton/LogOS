@@ -21,7 +21,10 @@ cd       build
 
 make
 
-make check
+test_started=$(date +%s)
+if ! make check; then
+    python3 /logos-build/build/verify-glibc-tests.py tests.sum "$test_started"
+fi
 
 touch /etc/ld.so.conf
 

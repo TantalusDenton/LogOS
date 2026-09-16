@@ -1,0 +1,304 @@
+Failed to initialize NVML: Driver/library version mismatch
+NVML library version: 580.178
+	libnvidia-vksc-core.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-vksc-core.so.1
+	libnvidia-tls.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-tls.so.580.178.04
+	libnvidia-tls.so.580.178.04 (libc6) => /lib/i386-linux-gnu/libnvidia-tls.so.580.178.04
+	libnvidia-rtcore.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-rtcore.so.580.178.04
+	libnvidia-ptxjitcompiler.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-ptxjitcompiler.so.1
+	libnvidia-ptxjitcompiler.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-ptxjitcompiler.so.1
+	libnvidia-ptxjitcompiler.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-ptxjitcompiler.so
+	libnvidia-ptxjitcompiler.so (libc6) => /lib/i386-linux-gnu/libnvidia-ptxjitcompiler.so
+	libnvidia-present.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-present.so.580.178.04
+	libnvidia-pkcs11.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-pkcs11.so.580.178.04
+	libnvidia-pkcs11-openssl3.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-pkcs11-openssl3.so.580.178.04
+	libnvidia-opticalflow.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-opticalflow.so.1
+	libnvidia-opticalflow.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-opticalflow.so.1
+	libnvidia-opticalflow.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-opticalflow.so
+	libnvidia-opticalflow.so (libc6) => /lib/i386-linux-gnu/libnvidia-opticalflow.so
+	libnvidia-opencl.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-opencl.so.1
+	libnvidia-opencl.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-opencl.so.1
+	libnvidia-nvvm70.so.4 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-nvvm70.so.4
+	libnvidia-nvvm70.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-nvvm70.so
+	libnvidia-nvvm.so.4 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-nvvm.so.4
+	libnvidia-nvvm.so.4 (libc6) => /lib/i386-linux-gnu/libnvidia-nvvm.so.4
+	libnvidia-nvvm.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-nvvm.so
+	libnvidia-nvvm.so (libc6) => /lib/i386-linux-gnu/libnvidia-nvvm.so
+	libnvidia-ngx.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-ngx.so.1
+	libnvidia-ml.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-ml.so.1
+	libnvidia-ml.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-ml.so.1
+	libnvidia-ml.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-ml.so
+	libnvidia-ml.so (libc6) => /lib/i386-linux-gnu/libnvidia-ml.so
+	libnvidia-gtk3.so.510.47.03 (libc6,x86-64) => /lib/libnvidia-gtk3.so.510.47.03
+	libnvidia-gtk2.so.510.47.03 (libc6,x86-64) => /lib/libnvidia-gtk2.so.510.47.03
+	libnvidia-gpucomp.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-gpucomp.so.580.178.04
+	libnvidia-gpucomp.so.580.178.04 (libc6) => /lib/i386-linux-gnu/libnvidia-gpucomp.so.580.178.04
+	libnvidia-glvkspirv.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glvkspirv.so.580.178.04
+	libnvidia-glvkspirv.so.580.178.04 (libc6) => /lib/i386-linux-gnu/libnvidia-glvkspirv.so.580.178.04
+	libnvidia-glsi.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glsi.so.580.178.04
+	libnvidia-glsi.so.580.178.04 (libc6) => /lib/i386-linux-gnu/libnvidia-glsi.so.580.178.04
+	libnvidia-glcore.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-glcore.so.580.178.04
+	libnvidia-glcore.so.580.178.04 (libc6) => /lib/i386-linux-gnu/libnvidia-glcore.so.580.178.04
+	libnvidia-fbc.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-fbc.so.1
+	libnvidia-fbc.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-fbc.so.1
+	libnvidia-fbc.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-fbc.so
+	libnvidia-fbc.so (libc6) => /lib/i386-linux-gnu/libnvidia-fbc.so
+	libnvidia-encode.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-encode.so.1
+	libnvidia-encode.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-encode.so.1
+	libnvidia-encode.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-encode.so
+	libnvidia-encode.so (libc6) => /lib/i386-linux-gnu/libnvidia-encode.so
+	libnvidia-eglcore.so.580.178.04 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-eglcore.so.580.178.04
+	libnvidia-eglcore.so.580.178.04 (libc6) => /lib/i386-linux-gnu/libnvidia-eglcore.so.580.178.04
+	libnvidia-egl-xlib.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-xlib.so.1
+	libnvidia-egl-xlib.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-egl-xlib.so.1
+	libnvidia-egl-xcb.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-xcb.so.1
+	libnvidia-egl-xcb.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-egl-xcb.so.1
+	libnvidia-egl-wayland.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-wayland.so.1
+	libnvidia-egl-wayland.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-egl-wayland.so.1
+	libnvidia-egl-gbm.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-egl-gbm.so.1
+	libnvidia-egl-gbm.so.1 (libc6) => /lib/i386-linux-gnu/libnvidia-egl-gbm.so.1
+	libnvidia-container.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-container.so.1
+	libnvidia-container-go.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-container-go.so.1
+	libnvidia-cfg.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-cfg.so.1
+	libnvidia-cfg.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-cfg.so
+	libnvidia-api.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-api.so.1
+	libnvidia-allocator.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-allocator.so.1
+	libnvidia-allocator.so (libc6,x86-64) => /lib/x86_64-linux-gnu/libnvidia-allocator.so
+	libGLX_nvidia.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLX_nvidia.so.0
+	libGLX_nvidia.so.0 (libc6) => /lib/i386-linux-gnu/libGLX_nvidia.so.0
+	libGLESv2_nvidia.so.2 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLESv2_nvidia.so.2
+	libGLESv2_nvidia.so.2 (libc6) => /lib/i386-linux-gnu/libGLESv2_nvidia.so.2
+	libGLESv1_CM_nvidia.so.1 (libc6,x86-64) => /lib/x86_64-linux-gnu/libGLESv1_CM_nvidia.so.1
+	libGLESv1_CM_nvidia.so.1 (libc6) => /lib/i386-linux-gnu/libGLESv1_CM_nvidia.so.1
+	libEGL_nvidia.so.0 (libc6,x86-64) => /lib/x86_64-linux-gnu/libEGL_nvidia.so.0
+	libEGL_nvidia.so.0 (libc6) => /lib/i386-linux-gnu/libEGL_nvidia.so.0
+Hit:1 https://download.docker.com/linux/ubuntu noble InRelease
+Get:2 https://persistent.oaistatic.com/codex-app-prod/linux/deb stable InRelease [2797 B]
+Get:3 https://persistent.oaistatic.com/codex-app-prod/linux/deb stable/main amd64 Packages [839 B]
+Get:4 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:5 http://us.archive.ubuntu.com/ubuntu noble InRelease
+Get:6 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/main i386 Packages [358 kB]
+Hit:8 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1009 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [213 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1449 kB]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [336 kB]
+Fetched 3621 kB in 2s (2120 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+build-essential is already the newest version (12.10ubuntu1).
+bison is already the newest version (2:3.8.2+dfsg-1build2).
+wget is already the newest version (1.21.4-1ubuntu4.5).
+wget set to manually installed.
+curl is already the newest version (8.5.0-2ubuntu10.13).
+tar is already the newest version (1.35+dfsg-3ubuntu0.4).
+tar set to manually installed.
+xz-utils is already the newest version (5.6.1+really5.4.5-1ubuntu0.3).
+bzip2 is already the newest version (1.0.8-5.1ubuntu0.1).
+bzip2 set to manually installed.
+gzip is already the newest version (1.12-1ubuntu3.2).
+python3 is already the newest version (3.12.3-0ubuntu2.1).
+python3 set to manually installed.
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+patch is already the newest version (2.7.6-7build3).
+patch set to manually installed.
+perl is already the newest version (5.38.2-3.2ubuntu0.4).
+perl set to manually installed.
+file is already the newest version (1:5.45-3build1).
+file set to manually installed.
+diffutils is already the newest version (1:3.10-1ubuntu0.1).
+findutils is already the newest version (4.9.0-5build1).
+util-linux is already the newest version (2.39.3-9ubuntu6.6).
+util-linux set to manually installed.
+xserver-xephyr is already the newest version (2:21.1.12-1ubuntu1.6).
+xserver-xephyr set to manually installed.
+x11-utils is already the newest version (7.7+6build2).
+x11-utils set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libfwupd2 libgl1:i386 libgl1-mesa-dri:i386 libglvnd0:i386 libglx-mesa0:i386
+  libglx0:i386 libllvm19 libnvidia-cfg1-535 libnvidia-common-535
+  libnvidia-compute-535 libnvidia-compute-535:i386 libnvidia-decode-535
+  libnvidia-decode-535:i386 libnvidia-encode-535 libnvidia-encode-535:i386
+  libnvidia-extra-535 libnvidia-fbc1-535 libnvidia-fbc1-535:i386
+  libnvidia-gl-535 libnvidia-gl-535:i386 libvulkan1:i386 libxcb-glx0:i386
+  libxcb-shm0:i386 libxxf86vm1:i386 mesa-vulkan-drivers:i386
+  nvidia-compute-utils-535 nvidia-dkms-535 nvidia-firmware-535-535.309.01
+  nvidia-kernel-common-535 nvidia-kernel-source-535 nvidia-utils-535
+  slirp4netns xserver-xorg-video-nvidia-535
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libsigsegv2 libtext-unidecode-perl libxml-libxml-perl
+  libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl
+  libxml-sax-perl tex-common texinfo-lib
+Suggested packages:
+  gawk-doc libxml-sax-expatxs-perl debhelper texlive-base texlive-latex-base
+  texlive-plain-generic texlive-fonts-recommended
+The following NEW packages will be installed:
+  gawk libsigsegv2 libtext-unidecode-perl libxml-libxml-perl
+  libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl
+  libxml-sax-perl tex-common texinfo texinfo-lib
+0 upgraded, 11 newly installed, 0 to remove and 13 not upgraded.
+Need to get 2424 kB of archives.
+After this operation, 12.6 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu noble/main amd64 libsigsegv2 amd64 2.14-1ubuntu2 [15.0 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 gawk amd64 1:5.2.1-2ubuntu0.1 [463 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 libtext-unidecode-perl all 1.30-3 [105 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu noble/main amd64 libxml-namespacesupport-perl all 1.12-2 [13.5 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu noble/main amd64 libxml-sax-base-perl all 1.09-3 [18.9 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu noble/main amd64 libxml-sax-perl all 1.02+dfsg-3 [57.0 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu noble/main amd64 libxml-libxml-perl amd64 2.0207+dfsg+really+2.0134-1build4 [304 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu noble/main amd64 libxml-sax-expat-perl all 0.51-2 [8644 B]
+Get:9 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 tex-common all 6.18 [32.8 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 texinfo-lib amd64 7.1-3build2 [133 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 texinfo all 7.1-3build2 [1273 kB]
+Fetched 2424 kB in 1s (1682 kB/s)
+Selecting previously unselected package libsigsegv2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 367435 files and directories currently installed.)
+Preparing to unpack .../libsigsegv2_2.14-1ubuntu2_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.14-1ubuntu2) ...
+Setting up libsigsegv2:amd64 (2.14-1ubuntu2) ...
+Selecting previously unselected package gawk.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 367442 files and directories currently installed.)
+Preparing to unpack .../0-gawk_1%3a5.2.1-2ubuntu0.1_amd64.deb ...
+Unpacking gawk (1:5.2.1-2ubuntu0.1) ...
+Selecting previously unselected package libtext-unidecode-perl.
+Preparing to unpack .../1-libtext-unidecode-perl_1.30-3_all.deb ...
+Unpacking libtext-unidecode-perl (1.30-3) ...
+Selecting previously unselected package libxml-namespacesupport-perl.
+Preparing to unpack .../2-libxml-namespacesupport-perl_1.12-2_all.deb ...
+Unpacking libxml-namespacesupport-perl (1.12-2) ...
+Selecting previously unselected package libxml-sax-base-perl.
+Preparing to unpack .../3-libxml-sax-base-perl_1.09-3_all.deb ...
+Unpacking libxml-sax-base-perl (1.09-3) ...
+Selecting previously unselected package libxml-sax-perl.
+Preparing to unpack .../4-libxml-sax-perl_1.02+dfsg-3_all.deb ...
+Unpacking libxml-sax-perl (1.02+dfsg-3) ...
+Selecting previously unselected package libxml-libxml-perl.
+Preparing to unpack .../5-libxml-libxml-perl_2.0207+dfsg+really+2.0134-1build4_amd64.deb ...
+Unpacking libxml-libxml-perl (2.0207+dfsg+really+2.0134-1build4) ...
+Selecting previously unselected package libxml-sax-expat-perl.
+Preparing to unpack .../6-libxml-sax-expat-perl_0.51-2_all.deb ...
+Unpacking libxml-sax-expat-perl (0.51-2) ...
+Selecting previously unselected package tex-common.
+Preparing to unpack .../7-tex-common_6.18_all.deb ...
+Unpacking tex-common (6.18) ...
+Selecting previously unselected package texinfo-lib.
+Preparing to unpack .../8-texinfo-lib_7.1-3build2_amd64.deb ...
+Unpacking texinfo-lib (7.1-3build2) ...
+Selecting previously unselected package texinfo.
+Preparing to unpack .../9-texinfo_7.1-3build2_all.deb ...
+Unpacking texinfo (7.1-3build2) ...
+Setting up gawk (1:5.2.1-2ubuntu0.1) ...
+Setting up libxml-namespacesupport-perl (1.12-2) ...
+Setting up texinfo-lib (7.1-3build2) ...
+Setting up tex-common (6.18) ...
+update-language: texlive-base not installed and configured, doing nothing!
+Setting up libxml-sax-base-perl (1.09-3) ...
+Setting up libtext-unidecode-perl (1.30-3) ...
+Setting up libxml-sax-perl (1.02+dfsg-3) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::PurePerl with priority 10...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+
+Creating config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Setting up libxml-libxml-perl (2.0207+dfsg+really+2.0134-1build4) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX::Parser with priority 50...
+update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX with priority 50...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+Replacing config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Setting up libxml-sax-expat-perl (0.51-2) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::Expat with priority 50...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+Replacing config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Setting up texinfo (7.1-3build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for install-info (7.1-3build2) ...
+x86_64                   PASS
+Workspace capacity       PASS
+/usr/bin/bash
+bash                     PASS
+/usr/bin/gcc
+gcc                      PASS
+/usr/bin/g++
+g++                      PASS
+/usr/bin/make
+make                     PASS
+/usr/bin/bison
+bison                    PASS
+/usr/bin/gawk
+gawk                     PASS
+/usr/bin/texi2any
+texi2any                 PASS
+/usr/bin/patch
+patch                    PASS
+/usr/bin/tar
+tar                      PASS
+/usr/bin/xz
+xz                       PASS
+/usr/bin/bzip2
+bzip2                    PASS
+/usr/bin/gzip
+gzip                     PASS
+/usr/bin/sed
+sed                      PASS
+/usr/bin/grep
+grep                     PASS
+/usr/bin/diff
+diff                     PASS
+/usr/bin/find
+find                     PASS
+/usr/bin/perl
+perl                     PASS
+/usr/bin/python3
+python3                  PASS
+/usr/bin/wget
+wget                     PASS
+/usr/bin/curl
+curl                     PASS
+/usr/bin/git
+git                      PASS
+/usr/sbin/chroot
+chroot                   PASS
+/usr/bin/mount
+mount                    PASS
+/usr/bin/unshare
+unshare                  PASS
+/usr/bin/readelf
+readelf                  PASS
+/usr/bin/flock
+flock                    PASS
+sh is Bash               PASS
+awk is GNU awk           PASS
+yacc is Bison            PASS
+OK:    Coreutils 9.4    >= 8.1
+OK:    Bash      5.2.21 >= 3.2
+OK:    Binutils  2.42   >= 2.13.1
+OK:    Bison     3.8.2  >= 2.7
+OK:    Diffutils 3.10   >= 2.8.1
+OK:    Findutils 4.9.0  >= 4.2.31
+OK:    Gawk      5.2.1  >= 4.0.1
+OK:    GCC       13.3.0 >= 5.4
+OK:    GCC (C++) 13.3.0 >= 5.4
+OK:    Grep      3.11   >= 2.5.1a
+OK:    Gzip      1.12   >= 1.3.12
+OK:    M4        1.4.19 >= 1.4.10
+OK:    Make      4.3    >= 4.0
+OK:    Patch     2.7.6  >= 2.5.4
+OK:    Perl      5.38.2 >= 5.8.8
+OK:    Python    3.12.3 >= 3.4
+OK:    Sed       4.9    >= 4.1.5
+OK:    Tar       1.35   >= 1.22
+OK:    Texinfo   7.1    >= 5.0
+OK:    Xz        5.4.5  >= 5.0.0
+OK:    Linux Kernel 6.8.0 >= 5.10
+OK:    Linux Kernel supports UNIX 98 PTY
+Aliases:
+OK:    awk  is GNU
+OK:    yacc is Bison
+OK:    sh   is Bash
+Compiler check:
+OK:    g++ works
+OK: nproc reports 12 logical cores are available
+LFS version requirements PASS

@@ -2,7 +2,7 @@
 
 ## Requirements and storage
 
-Ubuntu 24.04 x86_64, working sudo/root, >=80 GiB initially free, 20 GiB reserve, LXD initialized with an appropriate pool/network. Default workspace is `/srv/logos`, configurable in `config/logos.conf`. Rootfs, sources, temporary tools, logs, artifacts, state and extracted work trees are separate. The tools directory is bind-mounted at `$LFS/tools` so the book's paths are preserved.
+Ubuntu 24.04 x86_64, working sudo/root, >=80 GiB initially free, 20 GiB reserve, LXD initialized with an appropriate pool/network. Default workspace is `/srv/logos`, configurable in `config/logos.conf`. The rootfs, download cache, temporary tools, logs, artifacts and state are separate. Extracted build trees live at `$LFS/sources`, with `$LOGOS_BUILD/work` pointing there. The tools directory is bind-mounted at `$LFS/tools` so the book's paths are preserved. Do not bind-mount a different directory from the same filesystem at `/sources`: temporary Bash cannot reliably resolve its current directory across that mount.
 
 Bootstrap changes `/bin/sh` to Bash, selects GNU awk, installs host build dependencies, and creates `logos-lfs`. It does not initialize or reconfigure existing LXD pools, touch partitions, install CUDA on the host, reboot, or replace NVIDIA drivers.
 
@@ -21,9 +21,9 @@ sudo ./build/build-logos.sh --resume
 sudo ./build/build-logos.sh --from 08-cuda
 ```
 
-`--from` requires every earlier stage marker; it never skips missing dependencies. Completed stages are reused. Changed inputs invalidate a resumed workspace and require a fresh configurable workspace, preventing accidental mixtures of incompatible toolchains. A failed package is extracted afresh. Failure after partially installing a package can need diagnosis or a fresh workspace: there is no transactional package manager or rollback snapshot.
+`--from` requires every earlier stage marker; it never skips missing dependencies. Completed stages are reused. Changed inputs stop a resume by default. After diagnosing and reviewing a runner or unfinished-recipe repair, `--resume --accept-input-changes` audits the previous input snapshot and completed package hashes. It rejects changes to completed recipes, source locks, package plans, completed stage scripts and installed overlays; those require a fresh workspace. Accepted repairs are recorded in `state/history.tsv`. A legacy workspace without an input snapshot cannot automatically accept changes. A failed package is extracted afresh. Failure after partially installing a package can need diagnosis or a fresh workspace: there is no transactional package manager or rollback snapshot.
 
-Book tests run with their prescribed users. Nonzero results stop the build, including upstream expected-failure situations requiring review. Do not globally disable tests. Log output and the specific failing test before adapting a recipe. The private mount namespace cleans up bind/proc/sys mounts automatically on exit.
+Book tests run with their prescribed users. Nonzero results stop the build. The single diagnosed `io/tst-lchmod` descriptor-path failure is handled explicitly according to LFS 13.1; a fresh complete summary and the exact expected diagnostic are required. Test summaries and failure output are retained under `logs/tests`. Do not globally disable tests. Log output and the specific failing test before adapting a recipe. The private mount namespace cleans up bind/proc/sys mounts automatically on exit.
 
 Stages 01/02 use the isolated LFS environment as `logos-lfs`. Stage 03 builds chapters 7/8 in chroot, including systemd in book order. Stage 04 configures that systemd for LXD. Stage 05 builds network/build support; 06 X11; 07 terminal; 08 CUDA plus GCC 14 and actual GPU computation in a temporary unprivileged LXD instance; 09 llama.cpp; 10 LogOS software and ABI checks.
 

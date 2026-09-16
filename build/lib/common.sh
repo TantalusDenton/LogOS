@@ -20,12 +20,30 @@ space_check() {
  (( avail >= need * 1024 * 1024 * 1024 )) || fail "$target has less than ${need} GiB free; choose LOGOS_BUILD on another filesystem."
 }
 workspace() {
- mkdir -p "$LOGOS_BUILD"/{rootfs,sources,tools,logs,artifacts,state,work}
+ mkdir -p "$LOGOS_BUILD"/{rootfs,sources,tools,logs,artifacts,state}
  [[ ! -L $LFS && $LFS != / ]] || fail 'Rootfs must be a real directory.'
  if [[ -e $LOGOS_BUILD/.logos-workspace ]]; then
   [[ $(cat "$LOGOS_BUILD/.logos-workspace") == "$LOGOS_BUILD" ]] || fail 'Workspace identity mismatch'
  else
   [[ -z $(ls -A "$LFS") ]] || fail 'Refusing to adopt a populated rootfs'
   printf '%s\n' "$LOGOS_BUILD" > "$LOGOS_BUILD/.logos-workspace"
+ fi
+}
+prepare_worktree() {
+ # Call only while holding the build lock.
+ # Keep the build tree at the book's physical /sources path. A same-filesystem
+ # bind mount breaks the temporary Bash getcwd fallback (readdir inode mismatch).
+ # The download cache remains separate at LOGOS_BUILD/sources.
+ if [[ -d $LOGOS_BUILD/work && ! -L $LOGOS_BUILD/work ]]; then
+  [[ ! -d $LFS/sources || -z $(ls -A "$LFS/sources") ]] || fail 'Cannot migrate two populated source work directories'
+  mountpoint -q "$LFS/sources" && fail 'Cannot migrate a mounted source work directory'
+  [[ ! -d $LFS/sources ]] || rmdir "$LFS/sources"
+  mv "$LOGOS_BUILD/work" "$LFS/sources"
+ fi
+ mkdir -p "$LFS/sources"
+ if [[ -L $LOGOS_BUILD/work ]]; then
+  [[ $(realpath "$LOGOS_BUILD/work") == "$LFS/sources" ]] || fail 'Unexpected work symlink'
+ else
+  ln -s rootfs/sources "$LOGOS_BUILD/work"
  fi
 }

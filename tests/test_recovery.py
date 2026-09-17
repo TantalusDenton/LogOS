@@ -20,6 +20,7 @@ resume = load('resume', 'check-resume.py')
 glibc = load('glibc', 'verify-glibc-tests.py')
 binutils = load('binutils', 'verify-binutils-tests.py')
 groff = load('groff', 'verify-groff-tests.py')
+tar = load('tar', 'verify-tar-tests.py')
 acl = load('acl', 'verify-acl-tests.py')
 findutils = load('findutils', 'verify-findutils-tests.py')
 
@@ -146,6 +147,21 @@ class Recovery(unittest.TestCase):
         log.write_text('Segmentation fault\n')
         with self.assertRaises(ValueError):
             groff.verify(self.root, 0)
+
+
+    def test_tar_rejects_actual_capability_loss(self):
+        p = self.root / 'tests/testsuite.log'
+        p.parent.mkdir()
+        original = ('ERROR: 224 tests were run,\n1 failed unexpectedly.\n20 tests were skipped.\n'
+                    '## Detailed failed tests. ##\n-dir/file = cap_chown=ei\n+dir/file cap_chown=ei\n'
+                    '233. capabs_raw01.at:25: 233. capabilities: binary store/restore (capabs_raw01.at:25): FAILED (capabs_raw01.at:28)\n')
+        p.write_text(original)
+        tar.verify(self.root, 0)
+        with self.assertRaises(ValueError):
+            tar.verify(self.root, 99999999999)
+        p.write_text(original.replace('+dir/file cap_chown=ei', '+dir/file'))
+        with self.assertRaises(ValueError):
+            tar.verify(self.root, 0)
 
 if __name__ == '__main__':
     unittest.main()

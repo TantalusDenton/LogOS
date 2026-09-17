@@ -24,7 +24,7 @@ test_redirect_rejected_before_any_remote_connection (test_local_http.LocalHTTP.t
 test_schema_sent_and_only_loopback_used_despite_proxy (test_local_http.LocalHTTP.test_schema_sent_and_only_loopback_used_despite_proxy) ... ok
 
 ----------------------------------------------------------------------
-Ran 23 tests in 1.045s
+Ran 23 tests in 1.044s
 
 OK
 /usr/bin/python3 -m unittest discover -s tests -v
@@ -44,9 +44,10 @@ test_groff_rejects_a_different_smoke_test_failure (test_recovery.Recovery.test_g
 test_installed_overlay_cannot_be_waived (test_recovery.Recovery.test_installed_overlay_cannot_be_waived) ... ok
 test_only_diagnosed_glibc_failure_allowed (test_recovery.Recovery.test_only_diagnosed_glibc_failure_allowed) ... ok
 test_runner_repair_allowed_but_completed_inputs_protected (test_recovery.Recovery.test_runner_repair_allowed_but_completed_inputs_protected) ... ok
+test_tar_rejects_actual_capability_loss (test_recovery.Recovery.test_tar_rejects_actual_capability_loss) ... ok
 
 ----------------------------------------------------------------------
-Ran 16 tests in 0.035s
+Ran 17 tests in 0.035s
 
 OK
 KNOWN LFS FAILURE (not PASS): test/cp; temporary Coreutils lacks ACL support
@@ -59,5 +60,7 @@ KNOWN LFS FAILURE (not PASS): neqn-smoke-test.sh; eqn not installed yet
 Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/groff.html
 KNOWN LFS CHROOT FAILURE (not PASS): io/tst-lchmod; descriptor path changes after leaving chroot
 Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/glibc.html
+KNOWN TEST COMPATIBILITY FAILURE (not PASS): Tar restored cap_chown=ei; getcap omits the legacy equals separator
+Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/tar.html
 find build host rootfs-overlay -type f -name '*.sh' -print0 | xargs -0 -n1 bash -n
 bash -n rootfs-overlay/usr/bin/logos-session

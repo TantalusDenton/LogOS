@@ -12,7 +12,10 @@ FORCE_UNSAFE_CONFIGURE=1  \
 
 make
 
-make check
+test_started=$(date +%s)
+if ! make check; then
+ python3 /logos-build/build/verify-tar-tests.py . "$test_started"
+fi
 
 make install
 make -C doc install-html docdir=/usr/share/doc/tar-1.35

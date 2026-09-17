@@ -16,7 +16,7 @@ def save_test_results(package_dir, package_id):
     target = BUILD / 'logs' / 'tests' / package_id
     for path in package_dir.rglob('*'):
         if not path.is_file() or not (path.suffix == '.sum' or path.name in
-                ('test-suite.log', 'testlog.txt', 'LastTest.log')):
+                ('test-suite.log', 'testsuite.log', 'testlog.txt', 'LastTest.log')):
             continue
         dest = target / path.relative_to(package_dir)
         dest.parent.mkdir(parents=True, exist_ok=True)

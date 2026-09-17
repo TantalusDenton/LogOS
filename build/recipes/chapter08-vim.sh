@@ -14,7 +14,8 @@ make
 chown -R tester .
 sed '/test_plugin_glvs/d' -i src/testdir/Make_all.mak
 
-su tester -c "TERM=xterm-256color LANG=en_US.UTF-8 make -j1 test" \
+# Use a dedicated test terminal; an attached build-console pane may be <24 rows.
+su tester -c "TERM=xterm-256color LANG=en_US.UTF-8 script -q -e -c 'stty rows 40 cols 120; make -j1 test' /dev/null" \
    &> vim-test.log
 
 make install

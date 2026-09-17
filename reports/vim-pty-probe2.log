@@ -1,0 +1,10 @@
++ export LFS=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs
++ LFS=/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs
++ unshare --mount --propagation private /bin/bash -c '
+mount --rbind /dev "$LFS/dev"
+mount --make-rslave "$LFS/dev"
+mount -t proc proc "$LFS/proc"
+chroot "$LFS" /usr/bin/env -i HOME=/root TERM=xterm PATH=/usr/bin:/usr/sbin /usr/bin/su tester -c "script -q -e -c \"stty rows 40 cols 120; stty size; id\" /dev/null"
+'
+40 120
+uid=101(tester) gid=101(tester) groups=101(tester)

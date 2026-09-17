@@ -20,7 +20,7 @@ LogOS is **not complete**. The cross-toolchain and temporary-system stages compl
 - Final Binutils completed with the exact LFS-documented gprofng exception recorded. GMP, MPFR, MPC, Attr, ACL, Libcap, Libxcrypt, Shadow and Gawk completed. Final GCC built and installed; all 42 distinct tests represented by its 74 FAIL/XPASS entries also appear in the official LFS 13.1 reference test log. Its compiler/linker sanity checks passed; exceptions are preserved in reports/gcc-test-exceptions.txt.
 - ACL device-permission tests passed after restoring dev/suid on a private rootfs mount; the host disk mount was unchanged. Its remaining temporary-Coreutils cp test failure matches the book and is recorded separately.
 
-- Python initially stopped on two DNS-dependent tests because the build chroot had no resolver configuration. The build runner now provides a volatile resolver; a fresh Python build and full test rerun are in progress.
+- Python initially stopped on two DNS-dependent tests because the build chroot had no resolver configuration. The build runner now provides a volatile resolver; a fresh Python build and full test rerun succeeded: 48,271 tests run, 2,087 skipped, no failures. Python installed successfully.
 - Latest standalone client tests: 23 passed; build/recovery/model-cache tests: 14 passed.
 
 ## Actual failures / blockers

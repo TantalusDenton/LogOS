@@ -1,0 +1,5 @@
+Initial Python 3.14.7 test failure: missing /etc/resolv.conf in chroot caused name resolution errors in test_urllib2 and test_urllibnet.
+Repair: volatile host resolver configuration in private build /run and container resolver symlink.
+Fresh rebuild retained the original full book test command.
+Full test result: SUCCESS; 48,271 tests run; 2,087 skipped.
+Both previously failing test files passed; package installed and completion marker created normally.

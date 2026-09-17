@@ -5,17 +5,23 @@ LogOS is **not complete**. The cross-toolchain and temporary-system stages compl
 ## Executed successfully
 
 - Stable LFS 13.1 systemd and BLFS 13.1 systemd books inspected; 111 LFS recipes and 29 selected BLFS/upstream package recipes prepared.
-- All LFS, selected BLFS and CUDA/GCC-14/llama.cpp source inputs downloaded and checked against the supplied project checksums or Git object IDs. The default model has not been downloaded. Two failed GNU mirror links were diagnosed and replaced with the canonical GNU HTTPS URLs without changing hashes.
+- All LFS, selected BLFS and CUDA/GCC-14/llama.cpp source inputs downloaded and checked against the supplied project checksums or Git object IDs. The single default Qwen GGUF has also been downloaded and verified against its pinned SHA-256. Two failed GNU mirror links were diagnosed and replaced with the canonical GNU HTTPS URLs without changing hashes.
 - 28 Python tests: strict command JSON parsing, invalid/duplicate keys, control-character rejection, risk classification, explicit approvals, loopback HTTP with proxies disabled, redirect rejection, 40-line capture bound, source-integrity failure handling and recipe/source consistency.
 - Shell syntax checks for build/host/recipe scripts and logos-session.
-- Nine build/recovery tests passed after the layout repair, including rejection of stale completed recipes and unknown glibc test failures.
-- glibc diagnosis: moving the physical build tree to the book's `/sources` path resolved 13 failed tests. Retest: 6,761 PASS, one documented chroot lchmod failure, 597 UNSUPPORTED and 16 XFAIL. A fresh full build/test run is in progress.
+- Fourteen build/recovery/model-cache tests passed, including rejection of stale completed recipes, unexpected test failures and corrupt model caches.
+- glibc diagnosis: moving the physical build tree to the book's `/sources` path resolved 13 failed tests. Retest: 6,761 PASS, one documented chroot lchmod failure, 597 UNSUPPORTED and 16 XFAIL. The subsequent fresh full glibc build/test/install completed.
 - Host-only libevent 2.1.13 and tmux 3.7c built from verified sources into the workspace (these host test binaries are never copied into LogOS).
 - Real tmux integration test: Insert did not execute, Cancel sent nothing, confirmed Run executed, and Bash remained operational after the AI pane exited.
 - Xephyr started on the actual local desktop at :100, 1600x900; xdpyinfo connected, core font 9x15 was available, and port 6100 had no TCP listener. Test Xephyr was then closed. This was a host display test, not a running LogOS terminal.
 - LXD 6.9 server queried; NVIDIA CDI and runtime capabilities are available.
 - User-shared root tmux console connected and verified with `id` (UID 0).
 - Host bootstrap completed successfully: GNU awk and texinfo installed, LFS-required sh/awk aliases configured, build account created, and all LFS host version/compiler checks passed. No NVIDIA driver packages were installed by bootstrap.
+
+- Final Binutils completed with the exact LFS-documented gprofng exception recorded. GMP, MPFR, MPC, Attr, ACL, Libcap, Libxcrypt, Shadow and Gawk completed. Final GCC built and installed; all 42 distinct tests represented by its 74 FAIL/XPASS entries also appear in the official LFS 13.1 reference test log. Its compiler/linker sanity checks passed; exceptions are preserved in reports/gcc-test-exceptions.txt.
+- ACL device-permission tests passed after restoring dev/suid on a private rootfs mount; the host disk mount was unchanged. Its remaining temporary-Coreutils cp test failure matches the book and is recorded separately.
+
+- Python initially stopped on two DNS-dependent tests because the build chroot had no resolver configuration. The build runner now provides a volatile resolver; a fresh Python build and full test rerun are in progress.
+- Latest standalone client tests: 23 passed; build/recovery/model-cache tests: 14 passed.
 
 ## Actual failures / blockers
 

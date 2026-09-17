@@ -1,0 +1,5 @@
+GCC 16.2 built, installed, and passed the LFS compiler/linker sanity checks.
+Saved test exceptions: 74; distinct tests: 42.
+Tests absent from official LFS 13.1 reference exceptions: [].
+Reference: https://www.linuxfromscratch.org/lfs/build-logs/13.1/i7-14700K/test-logs/830-gcc-16.2.0
+These exceptions are recorded, not counted as passing tests.

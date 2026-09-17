@@ -23,7 +23,7 @@ sudo ./build/build-logos.sh --from 08-cuda
 
 `--from` requires every earlier stage marker; it never skips missing dependencies. Completed stages are reused. Changed inputs stop a resume by default. After diagnosing and reviewing a runner or unfinished-recipe repair, `--resume --accept-input-changes` audits the previous input snapshot and completed package hashes. It rejects changes to completed recipes, source locks, package plans, completed stage scripts and installed overlays; those require a fresh workspace. Accepted repairs are recorded in `state/history.tsv`. A legacy workspace without an input snapshot cannot automatically accept changes. A failed package is extracted afresh. Failure after partially installing a package can need diagnosis or a fresh workspace: there is no transactional package manager or rollback snapshot.
 
-Book tests run with their prescribed users. Nonzero results stop the build. The single diagnosed `io/tst-lchmod` descriptor-path failure is handled explicitly according to LFS 13.1; a fresh complete summary and the exact expected diagnostic are required. Test summaries and failure output are retained under `logs/tests`. Do not globally disable tests. Log output and the specific failing test before adapting a recipe. The private mount namespace cleans up bind/proc/sys mounts automatically on exit.
+Book tests run with their prescribed users. Nonzero results stop the build. Diagnosed glibc lchmod, Binutils gprofng and ACL cp failures are handled individually according to LFS 13.1; fresh complete summaries and the exact expected diagnostics are required. Test summaries and failure output are retained under `logs/tests`. Do not globally disable tests. Log output and the specific failing test before adapting a recipe. The private mount namespace cleans up bind/proc/sys mounts automatically on exit.
 
 Stages 01/02 use the isolated LFS environment as `logos-lfs`. Stage 03 builds chapters 7/8 in chroot, including systemd in book order. Stage 04 configures that systemd for LXD. Stage 05 builds network/build support; 06 X11; 07 terminal; 08 CUDA plus GCC 14 and actual GPU computation in a temporary unprivileged LXD instance; 09 llama.cpp; 10 LogOS software and ABI checks.
 
@@ -43,3 +43,7 @@ subdirectory. This intentionally lets the agent execute root commands. It does
 not alter sudoers. Close the channel with `./host/root-console.sh close` when the
 build is finished. The current session has built tmux/libevent locally for this
 helper; other hosts can use an already-installed tmux.
+
+## Default model cache
+
+`./build/download-model.sh` optionally caches and verifies the single pinned GGUF under `$LOGOS_BUILD/models`. First startup verifies that cached file and transfers it into the container before `logos-model install-default` verifies it again. Without a host cache, the same guest command downloads and verifies the model normally. Existing guest model files are not overwritten. The runtime AI remains loopback-only.

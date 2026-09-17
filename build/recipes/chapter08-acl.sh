@@ -11,6 +11,9 @@ set -o pipefail
 
 make
 
-make check
+test_started=$(date +%s)
+if ! make check; then
+    python3 /logos-build/build/verify-acl-tests.py . "$test_started"
+fi
 
 make install

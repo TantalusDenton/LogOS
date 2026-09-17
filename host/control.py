@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """LXD/Xephyr lifecycle; all subprocess arguments are passed without a shell."""
-import json, os, pathlib, re, subprocess, sys, time
+import hashlib, json, os, pathlib, re, subprocess, sys, time
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 NAME = os.getenv("LOGOS_CONTAINER", "logos-dev")
@@ -256,6 +256,33 @@ def xephyr():
     raise RuntimeError("Xephyr socket did not appear")
 
 
+def seed_cached_model():
+    lock = json.loads((ROOT / 'sources/model.json').read_text())
+    cached = BUILD / 'models' / lock['name']
+    if not cached.is_file():
+        return
+    digest = hashlib.sha256()
+    with cached.open('rb') as f:
+        for chunk in iter(lambda: f.read(1048576), b''):
+            digest.update(chunk)
+    if 'sha256:' + digest.hexdigest() != lock['checksum']:
+        raise RuntimeError('Cached model checksum mismatch')
+    target = '/var/lib/logos/models/default.gguf'
+    exists = subprocess.run(['lxc', 'exec', NAME, '--', 'test', '-e', target], capture_output=True)
+    if exists.returncode == 0:
+        return  # logos-model verifies the installed file below.
+    if exists.returncode != 1:
+        raise RuntimeError('Cannot inspect container model path')
+    guest('install', '-d', '-m', '755', '/var/lib/logos/models')
+    part = target + '.preseed-' + str(os.getpid())
+    try:
+        lxc('file', 'push', str(cached), NAME + part, timeout=300)
+        guest('chmod', '0644', part)
+        guest('mv', '-n', part, target)
+    finally:
+        guest('rm', '-f', part, check=False)
+
+
 def start():
     gpu()
     owned()
@@ -298,6 +325,7 @@ def start():
         "--setenv=DISPLAY=" + DISPLAY,
         "/usr/bin/logos-session",
     )
+    seed_cached_model()
     guest("logos-model", "install-default", timeout=1800)
     guest("systemctl", "start", "logos-ai")
     for _ in range(180):

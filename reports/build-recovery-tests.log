@@ -3,6 +3,10 @@ test_cuda_pin (test_build.Build.test_cuda_pin) ... ok
 test_git_blob_integrity (test_build.Build.test_git_blob_integrity) ... ok
 test_no_unresolved_book_placeholders (test_build.Build.test_no_unresolved_book_placeholders) ... ok
 test_recipes_and_sources_resolve (test_build.Build.test_recipes_and_sources_resolve) ... ok
+test_bad_cache_never_reaches_container (test_model_cache.ModelCache.test_bad_cache_never_reaches_container) ... ok
+test_existing_model_is_not_overwritten (test_model_cache.ModelCache.test_existing_model_is_not_overwritten) ... ok
+test_push_failure_cleans_partial_file (test_model_cache.ModelCache.test_push_failure_cleans_partial_file) ... ok
+test_acl_accepts_only_cp_preservation_failure (test_recovery.Recovery.test_acl_accepts_only_cp_preservation_failure) ... ok
 test_binutils_rejects_additional_failures_and_stale_suites (test_recovery.Recovery.test_binutils_rejects_additional_failures_and_stale_suites) ... ok
 test_completed_recipe_cannot_be_waived (test_recovery.Recovery.test_completed_recipe_cannot_be_waived) ... ok
 test_installed_overlay_cannot_be_waived (test_recovery.Recovery.test_installed_overlay_cannot_be_waived) ... ok
@@ -10,9 +14,11 @@ test_only_diagnosed_glibc_failure_allowed (test_recovery.Recovery.test_only_diag
 test_runner_repair_allowed_but_completed_inputs_protected (test_recovery.Recovery.test_runner_repair_allowed_but_completed_inputs_protected) ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.037s
+Ran 14 tests in 0.037s
 
 OK
+KNOWN LFS FAILURE (not PASS): test/cp; temporary Coreutils lacks ACL support
+Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/acl.html
 KNOWN LFS FAILURE (not PASS): gprofng tmpdir/gp-gmon, missing calltree
 Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/binutils.html
 KNOWN LFS CHROOT FAILURE (not PASS): io/tst-lchmod; descriptor path changes after leaving chroot

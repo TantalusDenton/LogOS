@@ -1,0 +1,14 @@
+ACL 2.4.0 recovery — 2026-09-16
+Original: 12 PASS, 2 XFAIL, 2 FAIL (cp and root/permissions).
+permissions failed only opening the test device nodes: Permission denied.
+Host workspace mount is nosuid,nodev.
+
+Retested under a private self-bind of rootfs with dev,suid:
+13 PASS, 2 XFAIL, 1 FAIL (cp). root/permissions passed all 102 commands.
+Outside the private mount namespace the host disk stayed nosuid,nodev.
+
+The cp test's two ACL-preservation mismatches are documented by LFS:
+https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/acl.html
+Temporary Coreutils was built before ACL and cannot preserve these attributes.
+The narrow verifier checks the full summary and exact failing test/command counts.
+No ACL tests or filesystem permissions checks were disabled.

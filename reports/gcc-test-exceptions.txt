@@ -1,0 +1,74 @@
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/ipa/pr122458.c (test for excess errors)
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/lto/toplevel-extended-asm-1 c_lto_toplevel-extended-asm-1_0.o-c_lto_toplevel-extended-asm-1_1.o link, -O2 -flto -flto-partition=1to1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/lto/toplevel-simple-asm-1 c_lto_toplevel-simple-asm-1_0.o-c_lto_toplevel-simple-asm-1_1.o link, -O2 -flto -flto-toplevel-asm-heuristics -flto-partition=1to1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/lto/toplevel-simple-asm-1 c_lto_toplevel-simple-asm-1_0.o-c_lto_toplevel-simple-asm-1_1.o link, -O2 -flto -flto-toplevel-asm-heuristics -flto-partition=cache
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/lto/toplevel-simple-asm-1 c_lto_toplevel-simple-asm-1_0.o-c_lto_toplevel-simple-asm-1_1.o link, -O2 -flto -flto-toplevel-asm-heuristics -flto-partition=max
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/plugin/crash-test-nested-ice.c -fplugin=./crash_test_plugin.so  (test .sarif output for UTF-8-encoded parseable JSON)
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/plugin/crash-test-nested-ice.c -fplugin=./crash_test_plugin.so  dg-regexp 13 not found: "during GIMPLE pass: crash_test"
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:XPASS: gcc.dg/plugin/crash-test-nested-ice.c -fplugin=./crash_test_plugin.so (internal compiler error)
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/plugin/crash-test-nested-ice.c -fplugin=./crash_test_plugin.so (test for excess errors)
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/plugin/crash-test-nested-write-through-null.c -fplugin=./crash_test_plugin.so  (test .sarif output for UTF-8-encoded parseable JSON)
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/plugin/crash-test-nested-write-through-null.c -fplugin=./crash_test_plugin.so  dg-regexp 13 not found: "during GIMPLE pass: crash_test"
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:XPASS: gcc.dg/plugin/crash-test-nested-write-through-null.c -fplugin=./crash_test_plugin.so (internal compiler error)
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.dg/plugin/crash-test-nested-write-through-null.c -fplugin=./crash_test_plugin.so (test for excess errors)
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/auto-init-padding-9.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/builtin-memmove-12.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/builtin-memmove-13.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memcpy-pr120683-2.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memcpy-pr120683-3.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memcpy-pr120683-4.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memcpy-pr120683-5.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memcpy-pr120683-6.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memcpy-pr120683-7.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr120683-13.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr120683-17.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr120683-18.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr120683-19.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr120683-20.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr120683-21.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr120683-22.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr120683-23.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr70308-1a.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/memset-pr70308-1b.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/pr111657-1.c check-function-bodies bar
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/pr115102.c scan-assembler bswaphisi2_lowpart
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/pr116896.c scan-assembler-times \tjp\t 2
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/pr120881-2a.c check-function-bodies f2
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/pr122343-4a.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/pr125355-2.c check-function-bodies foo.cold
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/pr125355.c check-function-bodies foo
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/xchg-4.c scan-assembler rolw
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/gcc/gcc.sum:FAIL: gcc.target/i386/xchg-4.c scan-assembler-not mov
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/memset-pr108585-1a.C   check-function-bodies _Z6squarei
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/memset-pr108585-1b.C   check-function-bodies _Z6squarei
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols1.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3fooi.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols1.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols1.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3fooi.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols1.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols1.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3fooi.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols1.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols3.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols3.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols3.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols4.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols4.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols4.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols5.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols5.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mv-symbols5.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3foov.ifunc\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols1.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3fooi\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols1.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3foov\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols1.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3fooi\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols1.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3foov\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols1.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3fooi\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols1.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3foov\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols3.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3fooi\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols3.C  -std=gnu++20  scan-assembler-times \n\tcall\t_Z3foov\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols3.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3fooi\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols3.C  -std=gnu++26  scan-assembler-times \n\tcall\t_Z3foov\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols3.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3fooi\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/mvc-symbols3.C  -std=gnu++98  scan-assembler-times \n\tcall\t_Z3foov\n 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/pr112824-2.C   scan-assembler-not vmov.*[ \\t]+[^\n]*%rsp
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/pr116896-1.C  -std=gnu++20  scan-assembler-times \tjp\t 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/pr116896-1.C  -std=gnu++23  scan-assembler-times \tjp\t 1
+.work/build/logs/tests/chapter08-gcc/build/gcc/testsuite/g++/g++.sum:FAIL: g++.target/i386/pr116896-1.C  -std=gnu++26  scan-assembler-times \tjp\t 1

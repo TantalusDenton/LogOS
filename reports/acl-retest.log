@@ -1,0 +1,52 @@
+TARGET                                                             SOURCE                              FSTYPE OPTIONS
+/mnt/01962c02-074f-47e7-8ee3-699a169f4905/LogOS/.work/build/rootfs /dev/sda[/LogOS/.work/build/rootfs] btrfs  rw,relatime,ssd,discard=async,space_cache,subvolid=5,subvol=/
+Making check in po
+make[1]: Entering directory '/sources/acl-2.4.0/po'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/sources/acl-2.4.0/po'
+make[1]: Entering directory '/sources/acl-2.4.0'
+make  libtestlookup.la
+make[2]: Entering directory '/sources/acl-2.4.0'
+make[2]: Leaving directory '/sources/acl-2.4.0'
+make  check-TESTS
+make[2]: Entering directory '/sources/acl-2.4.0'
+make[3]: Entering directory '/sources/acl-2.4.0'
+PASS: test/getfacl-lfs.run
+PASS: test/root/getfacl.run
+PASS: test/malformed-restore.run
+FAIL: test/cp.run
+PASS: test/getfacl-recursive.run
+PASS: test/root/restore.run
+PASS: test/setfacl-X.run
+PASS: test/getfacl-noacl.run
+XFAIL: test/nfs/nfsacl.run
+PASS: test/sbits-restore.run
+PASS: test/utf8-filenames.run
+PASS: test/restore.run
+PASS: test/root/permissions.run
+PASS: test/root/setfacl.run
+PASS: test/misc.run
+XFAIL: test/nfs/nfs-dir.run
+============================================================================
+Testsuite summary for acl 2.4.0
+============================================================================
+# TOTAL: 16
+# PASS:  13
+# SKIP:  0
+# XFAIL: 2
+# FAIL:  1
+# XPASS: 0
+# ERROR: 0
+============================================================================
+See ./test-suite.log for debugging.
+Some test(s) failed.  Please report this to acl-devel@nongnu.org,
+together with the test-suite.log file (gzipped) and your system
+information.  Thanks.
+============================================================================
+make[3]: *** [Makefile:1784: test-suite.log] Error 1
+make[3]: Leaving directory '/sources/acl-2.4.0'
+make[2]: *** [Makefile:1919: check-TESTS] Error 2
+make[2]: Leaving directory '/sources/acl-2.4.0'
+make[1]: *** [Makefile:2154: check-am] Error 2
+make[1]: Leaving directory '/sources/acl-2.4.0'
+make: *** [Makefile:1670: check-recursive] Error 1

@@ -19,6 +19,7 @@ def load(name, filename):
 resume = load('resume', 'check-resume.py')
 glibc = load('glibc', 'verify-glibc-tests.py')
 binutils = load('binutils', 'verify-binutils-tests.py')
+acl = load('acl', 'verify-acl-tests.py')
 
 class Recovery(unittest.TestCase):
     def setUp(self):
@@ -94,6 +95,19 @@ class Recovery(unittest.TestCase):
             f.write('FAIL: unexpected linker defect\n')
         with self.assertRaises(ValueError):
             binutils.verify(self.root, 0, 2)
+
+    def test_acl_accepts_only_cp_preservation_failure(self):
+        (self.root / 'test').mkdir()
+        summary = self.root / 'test-suite.log'
+        original = '# TOTAL: 16\n# PASS: 13\n# SKIP: 0\n# XFAIL: 2\n# FAIL: 1\n# XPASS: 0\n# ERROR: 0\nFAIL: test/cp\n'
+        summary.write_text(original)
+        (self.root / 'test/cp.log').write_text('cp -p f g -- ok\n22 commands (20 passed, 2 failed)\n')
+        acl.verify(self.root, 0)
+        with self.assertRaises(ValueError):
+            acl.verify(self.root, 99999999999)
+        summary.write_text(original.replace('FAIL: test/cp', 'FAIL: test/root/permissions'))
+        with self.assertRaises(ValueError):
+            acl.verify(self.root, 0)
 
 if __name__ == '__main__':
     unittest.main()

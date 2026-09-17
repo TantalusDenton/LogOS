@@ -16,7 +16,7 @@ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
  -DLLAMA_SUBPROCESS=OFF -DLLAMA_BUILD_APP=OFF -DLLAMA_BUILD_EXAMPLES=OFF \
  -DLLAMA_BUILD_UI=OFF -DLLAMA_USE_PREBUILT_UI=OFF \
  -DLLAMA_BUILD_TESTS=ON -DLLAMA_BUILD_SERVER=ON
-cmake --build build --parallel 8
+cmake --build build --parallel "$CMAKE_BUILD_PARALLEL_LEVEL"
 ctest --test-dir build --output-on-failure
 cmake --install build
 ldconfig

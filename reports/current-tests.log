@@ -1,0 +1,57 @@
+PYTHONPATH=logos-ai /usr/bin/python3 -m unittest discover -s logos-ai/tests -v
+test_bad_pane_rejected (test_ai.Approval.test_bad_pane_rejected) ... ok
+test_busy_pane_rejected (test_ai.Approval.test_busy_pane_rejected) ... ok
+test_cancel_and_invalid_choices_never_send (test_ai.Approval.test_cancel_and_invalid_choices_never_send) ... ok
+test_capture_sends_at_most_forty_lines (test_ai.Approval.test_capture_sends_at_most_forty_lines) ... ok
+test_context_capture_explicit (test_ai.Approval.test_context_capture_explicit) ... ok
+test_high_confirmed (test_ai.Approval.test_high_confirmed) ... ok
+test_high_requires_exact_run (test_ai.Approval.test_high_requires_exact_run) ... ok
+test_insert_never_enters (test_ai.Approval.test_insert_never_enters) ... ok
+test_run_clears_partial_line (test_ai.Approval.test_run_clears_partial_line) ... ok
+test_send_literal_without_second_shell (test_ai.Approval.test_send_literal_without_second_shell) ... ok
+test_literal_shell_syntax_allowed_for_approval (test_ai.Protocol.test_literal_shell_syntax_allowed_for_approval) ... ok
+test_no_controls_or_newlines (test_ai.Protocol.test_no_controls_or_newlines) ... ok
+test_reject_bad_schema (test_ai.Protocol.test_reject_bad_schema) ... ok
+test_remote_rejected (test_ai.Protocol.test_remote_rejected) ... ok
+test_terminal_escape_output (test_ai.Protocol.test_terminal_escape_output) ... ok
+test_unknown_route (test_ai.Protocol.test_unknown_route) ... ok
+test_valid (test_ai.Protocol.test_valid) ... ok
+test_high (test_ai.Risks.test_high) ... ok
+test_low (test_ai.Risks.test_low) ... ok
+test_medium (test_ai.Risks.test_medium) ... ok
+test_model_can_raise_risk (test_ai.Risks.test_model_can_raise_risk) ... ok
+test_redirect_rejected_before_any_remote_connection (test_local_http.LocalHTTP.test_redirect_rejected_before_any_remote_connection) ... ok
+test_schema_sent_and_only_loopback_used_despite_proxy (test_local_http.LocalHTTP.test_schema_sent_and_only_loopback_used_despite_proxy) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.045s
+
+OK
+/usr/bin/python3 -m unittest discover -s tests -v
+test_checksum_mismatch_fails_closed (test_build.Build.test_checksum_mismatch_fails_closed) ... ok
+test_cuda_pin (test_build.Build.test_cuda_pin) ... ok
+test_git_blob_integrity (test_build.Build.test_git_blob_integrity) ... ok
+test_no_unresolved_book_placeholders (test_build.Build.test_no_unresolved_book_placeholders) ... ok
+test_recipes_and_sources_resolve (test_build.Build.test_recipes_and_sources_resolve) ... ok
+test_bad_cache_never_reaches_container (test_model_cache.ModelCache.test_bad_cache_never_reaches_container) ... ok
+test_existing_model_is_not_overwritten (test_model_cache.ModelCache.test_existing_model_is_not_overwritten) ... ok
+test_push_failure_cleans_partial_file (test_model_cache.ModelCache.test_push_failure_cleans_partial_file) ... ok
+test_acl_accepts_only_cp_preservation_failure (test_recovery.Recovery.test_acl_accepts_only_cp_preservation_failure) ... ok
+test_binutils_rejects_additional_failures_and_stale_suites (test_recovery.Recovery.test_binutils_rejects_additional_failures_and_stale_suites) ... ok
+test_completed_recipe_cannot_be_waived (test_recovery.Recovery.test_completed_recipe_cannot_be_waived) ... ok
+test_installed_overlay_cannot_be_waived (test_recovery.Recovery.test_installed_overlay_cannot_be_waived) ... ok
+test_only_diagnosed_glibc_failure_allowed (test_recovery.Recovery.test_only_diagnosed_glibc_failure_allowed) ... ok
+test_runner_repair_allowed_but_completed_inputs_protected (test_recovery.Recovery.test_runner_repair_allowed_but_completed_inputs_protected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.031s
+
+OK
+KNOWN LFS FAILURE (not PASS): test/cp; temporary Coreutils lacks ACL support
+Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/acl.html
+KNOWN LFS FAILURE (not PASS): gprofng tmpdir/gp-gmon, missing calltree
+Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/binutils.html
+KNOWN LFS CHROOT FAILURE (not PASS): io/tst-lchmod; descriptor path changes after leaving chroot
+Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/glibc.html
+find build host rootfs-overlay -type f -name '*.sh' -print0 | xargs -0 -n1 bash -n
+bash -n rootfs-overlay/usr/bin/logos-session

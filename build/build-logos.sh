@@ -32,6 +32,10 @@ if (( ! resume )) && compgen -G "$LOGOS_BUILD/state/*.done" >/dev/null; then fai
 if [[ ! -f $LOGOS_BUILD/state/01-toolchain.done ]]; then "$REPO/build/check-host.sh" --build-only; fi
 # A separate private mount namespace guarantees mount cleanup on exit.
 mkdir -p "$LFS"/{dev,proc,sys,run,sources,logos-build,tools}
+# Desktop-mounted workspaces may be nodev/nosuid. LFS tests need normal Unix
+# semantics. Change only this private namespace's rootfs mount, not the disk.
+mount --bind "$LFS" "$LFS"
+mount -o remount,bind,rw,suid,dev "$LFS"
 mount --bind "$LOGOS_BUILD/tools" "$LFS/tools"
 mount --bind "$REPO" "$LFS/logos-build"
 mount -o remount,bind,ro "$LFS/logos-build"
@@ -39,6 +43,13 @@ mount --rbind /dev "$LFS/dev"; mount --make-rslave "$LFS/dev"
 mount -t proc proc "$LFS/proc"
 mount -t sysfs sysfs "$LFS/sys"
 mount -t tmpfs tmpfs "$LFS/run"
+# The chroot shares the host network, including its local DNS stub. Keep the
+# build resolver in volatile /run; the booted container supplies its own.
+mkdir -p "$LFS/run/systemd/resolve" "$LFS/etc"
+cat /etc/resolv.conf > "$LFS/run/systemd/resolve/stub-resolv.conf"
+if [[ ! -e $LFS/etc/resolv.conf && ! -L $LFS/etc/resolv.conf ]]; then
+ ln -s /run/systemd/resolve/stub-resolv.conf "$LFS/etc/resolv.conf"
+fi
 if [[ -L $LFS/dev/shm ]]; then mkdir -p "$LFS/$(readlink /dev/shm)"; else mount -t tmpfs -o nosuid,nodev tmpfs "$LFS/dev/shm"; fi
 fingerprint=$(cd "$REPO"; find build sources rootfs-overlay logos-ai/logos_ai -type f ! -name '*.pyc' -print0 | sort -z | xargs -0 sha256sum | sha256sum | cut -d' ' -f1)
 # A reviewed runner/layout repair may resume only with unchanged completed inputs.

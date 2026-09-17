@@ -126,6 +126,11 @@ def main():
                         ]
                     )
                 )
+    model = json.loads((ROOT / 'sources/model.json').read_text())
+    model_path = build / 'models' / model['name']
+    if model_path.is_file():
+        verify(model_path, model['checksum'])
+        lines.append('\t'.join([model['name'], model['url'], model['checksum'], model['license']]))
     (build / "artifacts/source-manifest.txt").write_text("\n".join(lines) + "\n")
     if errors:
         raise RuntimeError("Source download failures:\n" + "\n".join(errors))

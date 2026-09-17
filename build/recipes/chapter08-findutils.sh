@@ -10,6 +10,9 @@ set -o pipefail
 make
 
 chown -R tester .
-su tester -c "PATH=$PATH make check -k"
+test_started=$(date +%s)
+if ! su tester -c "PATH=$PATH make check -k"; then
+ python3 /logos-build/build/verify-findutils-tests.py . "$test_started"
+fi
 
 make install

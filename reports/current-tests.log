@@ -39,18 +39,21 @@ test_push_failure_cleans_partial_file (test_model_cache.ModelCache.test_push_fai
 test_acl_accepts_only_cp_preservation_failure (test_recovery.Recovery.test_acl_accepts_only_cp_preservation_failure) ... ok
 test_binutils_rejects_additional_failures_and_stale_suites (test_recovery.Recovery.test_binutils_rejects_additional_failures_and_stale_suites) ... ok
 test_completed_recipe_cannot_be_waived (test_recovery.Recovery.test_completed_recipe_cannot_be_waived) ... ok
+test_findutils_rejects_other_failures_and_stale_results (test_recovery.Recovery.test_findutils_rejects_other_failures_and_stale_results) ... ok
 test_installed_overlay_cannot_be_waived (test_recovery.Recovery.test_installed_overlay_cannot_be_waived) ... ok
 test_only_diagnosed_glibc_failure_allowed (test_recovery.Recovery.test_only_diagnosed_glibc_failure_allowed) ... ok
 test_runner_repair_allowed_but_completed_inputs_protected (test_recovery.Recovery.test_runner_repair_allowed_but_completed_inputs_protected) ... ok
 
 ----------------------------------------------------------------------
-Ran 14 tests in 0.031s
+Ran 15 tests in 0.033s
 
 OK
 KNOWN LFS FAILURE (not PASS): test/cp; temporary Coreutils lacks ACL support
 Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/acl.html
 KNOWN LFS FAILURE (not PASS): gprofng tmpdir/gp-gmon, missing calltree
 Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/binutils.html
+KNOWN LFS FAILURE (not PASS): test-regex-el; Greek locale fastmap mismatch
+Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/findutils.html
 KNOWN LFS CHROOT FAILURE (not PASS): io/tst-lchmod; descriptor path changes after leaving chroot
 Reference: https://www.linuxfromscratch.org/lfs/view/13.1-systemd/chapter08/glibc.html
 find build host rootfs-overlay -type f -name '*.sh' -print0 | xargs -0 -n1 bash -n

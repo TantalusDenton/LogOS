@@ -1,0 +1,18 @@
+
+/bin/bash
+	linux-vdso.so.1 (0x00007fff1ad22000)
+	libreadline.so.8 => /usr/lib/libreadline.so.8 (0x0000704674d56000)
+	libhistory.so.8 => /usr/lib/libhistory.so.8 (0x0000704674d47000)
+	libncursesw.so.6 => /usr/lib/libncursesw.so.6 (0x0000704674ccc000)
+	libc.so.6 => /usr/lib/libc.so.6 (0x0000704674ad5000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000704674ed1000)
+
+/usr/bin/python3
+	linux-vdso.so.1 (0x00007ffce8df9000)
+	libpython3.14.so.1.0 => /usr/lib/libpython3.14.so.1.0 (0x0000798b97000000)
+	libm.so.6 => /usr/lib/libm.so.6 (0x0000798b97762000)
+	libc.so.6 => /usr/lib/libc.so.6 (0x0000798b96e09000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000798b97887000)
+3.14.7 (main, Sep 17 2026, 02:28:00) [GCC 16.2.0]
+OpenSSL 4.0.1 9 Jun 2026
+3.53.4

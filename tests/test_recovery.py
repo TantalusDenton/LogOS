@@ -20,6 +20,7 @@ resume = load('resume', 'check-resume.py')
 glibc = load('glibc', 'verify-glibc-tests.py')
 binutils = load('binutils', 'verify-binutils-tests.py')
 acl = load('acl', 'verify-acl-tests.py')
+findutils = load('findutils', 'verify-findutils-tests.py')
 
 class Recovery(unittest.TestCase):
     def setUp(self):
@@ -108,6 +109,28 @@ class Recovery(unittest.TestCase):
         summary.write_text(original.replace('FAIL: test/cp', 'FAIL: test/root/permissions'))
         with self.assertRaises(ValueError):
             acl.verify(self.root, 0)
+
+
+    def test_findutils_rejects_other_failures_and_stale_results(self):
+        for name in ('lib/test-suite.log', 'gnulib-tests/test-suite.log', 'tests/test-suite.log',
+                     'find/testsuite/find.sum', 'locate/testsuite/locate.sum', 'xargs/testsuite/xargs.sum'):
+            p = self.root / name
+            p.parent.mkdir(parents=True, exist_ok=True)
+            known = name.startswith('gnulib-tests/')
+            p.write_text(('# of expected passes 10\n' if name.endswith('.sum') else
+                          f'# TOTAL: {11 if known else 10}\n# PASS: 10\n# SKIP: 0\n# XFAIL: 0\n# FAIL: {int(known)}\n# XPASS: 0\n# ERROR: 0\n')
+                         + ('FAIL: test-regex-el\n' if known else ''))
+        p = self.root / 'gnulib-tests/test-regex-el.log'
+        p.write_text(''.join('test-regex: fastmap mismatch: pattern = ' + chr(92) + value
+                            + ', string = ' + chr(92) + 'xf2, with = -1, without = 0\n'
+                            for value in ('xd3', 'xf2', 'xf3')) + 'FAIL test-regex-el (exit status: 1)\n')
+        findutils.verify(self.root, 0)
+        with self.assertRaises(ValueError):
+            findutils.verify(self.root, 99999999999)
+        with (self.root / 'find/testsuite/find.sum').open('a') as f:
+            f.write('FAIL: unexpected regression\n')
+        with self.assertRaises(ValueError):
+            findutils.verify(self.root, 0)
 
 if __name__ == '__main__':
     unittest.main()

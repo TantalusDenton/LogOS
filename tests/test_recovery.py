@@ -19,6 +19,7 @@ def load(name, filename):
 resume = load('resume', 'check-resume.py')
 glibc = load('glibc', 'verify-glibc-tests.py')
 binutils = load('binutils', 'verify-binutils-tests.py')
+groff = load('groff', 'verify-groff-tests.py')
 acl = load('acl', 'verify-acl-tests.py')
 findutils = load('findutils', 'verify-findutils-tests.py')
 
@@ -131,6 +132,20 @@ class Recovery(unittest.TestCase):
             f.write('FAIL: unexpected regression\n')
         with self.assertRaises(ValueError):
             findutils.verify(self.root, 0)
+
+
+    def test_groff_rejects_a_different_smoke_test_failure(self):
+        summary = self.root / 'test-suite.log'
+        summary.write_text('# TOTAL: 316\n# PASS: 298\n# SKIP: 13\n# XFAIL: 4\n# FAIL: 1\n# XPASS: 0\n# ERROR: 0\nFAIL: src/preproc/eqn/tests/neqn-smoke-test.sh\n')
+        log = self.root / 'src/preproc/eqn/tests/neqn-smoke-test.sh.log'
+        log.parent.mkdir(parents=True)
+        log.write_text('/sources/groff-1.24.1/neqn: line 59: exec: eqn: not found\n\nFAIL src/preproc/eqn/tests/neqn-smoke-test.sh (exit status: 1)\n')
+        groff.verify(self.root, 0)
+        with self.assertRaises(ValueError):
+            groff.verify(self.root, 99999999999)
+        log.write_text('Segmentation fault\n')
+        with self.assertRaises(ValueError):
+            groff.verify(self.root, 0)
 
 if __name__ == '__main__':
     unittest.main()

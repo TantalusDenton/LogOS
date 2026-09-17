@@ -9,6 +9,9 @@ PAGE=A4 ./configure --prefix=/usr
 
 make -j1
 
-make check
+test_started=$(date +%s)
+if ! make check; then
+ python3 /logos-build/build/verify-groff-tests.py . "$test_started"
+fi
 
 make install

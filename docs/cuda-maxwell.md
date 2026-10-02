@@ -2,7 +2,7 @@
 
 Quadro M2000: compute capability 5.2, 4 GiB VRAM. CUDA 13 cannot compile Maxwell. Use pinned CUDA **12.9.1** redistribution components; `CMAKE_CUDA_ARCHITECTURES=52` emits Maxwell code. The upstream llama.cpp CUDA CMake file at the pinned commit explicitly includes Maxwell support for CUDA <13.
 
-CUDA's GCC support range does not cover LFS 13.1 GCC 16. GCC 14.3.0 is built from upstream source inside LogOS for NVCC and llama.cpp; it does not replace `/usr/bin/gcc`. GCC 14/new-glibc/CUDA header interoperability remains untested; do not add `--allow-unsupported-compiler` or conceal errors if this combination fails.
+CUDA's GCC support range does not cover LFS 13.1 GCC 16. GCC 14.3.0 is built from upstream source inside LogOS for NVCC and llama.cpp; it does not replace `/usr/bin/gcc`. The completed build required `noexcept(true)` on six CUDA math declarations to match the newer glibc headers, disabling GCC 14 libsanitizer, an explicit CUDA library search path for the diagnostic, and a `lib64 -> lib` link for CMake toolkit discovery. These changes are in stages 08/09. No `--allow-unsupported-compiler` flag is used. Actual CUDA computation and GPU inference passed on the tested host; the separate compatibility-compiler suite is not an all-green qualification (see [validation](validation.md)).
 
 The selected Qwen2.5-Coder-1.5B-Instruct Q4_K_M file is about 1.12 GB. Default context is 4096, parallelism 1, batch 128 and microbatch 64, with 99 GPU layers requested (all available layers). Actual fit and offload must be verified on this host, which shares GPU memory with the graphical desktop. If allocation fails, measure free VRAM, reduce context/batch or GPU_LAYERS, and repeat health; GPU_LAYERS=0 is rejected.
 

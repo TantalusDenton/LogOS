@@ -1,38 +1,83 @@
 # Validation status
 
-LogOS is **not complete**. The cross-toolchain and temporary-system stages completed. The chroot base build is running. No complete rootfs, container boot, GPU computation or GPU inference has passed yet.
+## Completed build and runtime run
 
-## Executed successfully
+On **September 20, 2026 (America/Los_Angeles; September 21 UTC)**, the full build
+completed with exit code 0 and all ten stage markers, including CUDA verification,
+llama.cpp compilation, rootfs ABI validation and packaging. The approximately
+2.6 GiB rootfs was imported into LXD and started as unprivileged `logos-dev` on
+the `goldenfir` pool. The host was not rebooted and its NVIDIA driver/kernel/boot
+configuration was not changed by these build/run steps.
 
-- Stable LFS 13.1 systemd and BLFS 13.1 systemd books inspected; 111 LFS recipes and 29 selected BLFS/upstream package recipes prepared.
-- All LFS, selected BLFS and CUDA/GCC-14/llama.cpp source inputs downloaded and checked against the supplied project checksums or Git object IDs. The single default Qwen GGUF has also been downloaded and verified against its pinned SHA-256. Two failed GNU mirror links were diagnosed and replaced with the canonical GNU HTTPS URLs without changing hashes.
-- 28 Python tests: strict command JSON parsing, invalid/duplicate keys, control-character rejection, risk classification, explicit approvals, loopback HTTP with proxies disabled, redirect rejection, 40-line capture bound, source-integrity failure handling and recipe/source consistency.
-- Shell syntax checks for build/host/recipe scripts and logos-session.
-- Fourteen build/recovery/model-cache tests passed, including rejection of stale completed recipes, unexpected test failures and corrupt model caches.
-- glibc diagnosis: moving the physical build tree to the book's `/sources` path resolved 13 failed tests. Retest: 6,761 PASS, one documented chroot lchmod failure, 597 UNSUPPORTED and 16 XFAIL. The subsequent fresh full glibc build/test/install completed.
-- Host-only libevent 2.1.13 and tmux 3.7c built from verified sources into the workspace (these host test binaries are never copied into LogOS).
-- Real tmux integration test: Insert did not execute, Cancel sent nothing, confirmed Run executed, and Bash remained operational after the AI pane exited.
-- Xephyr started on the actual local desktop at :100, 1600x900; xdpyinfo connected, core font 9x15 was available, and port 6100 had no TCP listener. Test Xephyr was then closed. This was a host display test, not a running LogOS terminal.
-- LXD 6.9 server queried; NVIDIA CDI and runtime capabilities are available.
-- User-shared root tmux console connected and verified with `id` (UID 0).
-- Host bootstrap completed successfully: GNU awk and texinfo installed, LFS-required sh/awk aliases configured, build account created, and all LFS host version/compiler checks passed. No NVIDIA driver packages were installed by bootstrap.
+Observed runtime results after the repairs below:
 
-- Final Binutils completed with the exact LFS-documented gprofng exception recorded. GMP, MPFR, MPC, Attr, ACL, Libcap, Libxcrypt, Shadow and Gawk completed. Final GCC built and installed; all 42 distinct tests represented by its 74 FAIL/XPASS entries also appear in the official LFS 13.1 reference test log. Its compiler/linker sanity checks passed; exceptions are preserved in reports/gcc-test-exceptions.txt.
-- ACL device-permission tests passed after restoring dev/suid on a private rootfs mount; the host disk mount was unchanged. Its remaining temporary-Coreutils cp test failure matches the book and is recorded separately.
+- systemd, DHCP/network route, gateway ping and DNS passed.
+- Xephyr `:100`, the X11 socket, xterm, tmux and `logos-terminal` passed.
+- NVIDIA Quadro M2000, CUDA 12.9 runtime and a real CUDA kernel computation passed.
+- llama.cpp loaded the pinned model, served local inference and reported **29/29
+  layers offloaded**. Live inference samples showed GPU utilization.
+- Structured command proposals and the health script's command-pattern checks
+  passed. These are smoke checks, not a benchmark of command correctness.
 
-- Python initially stopped on two DNS-dependent tests because the build chroot had no resolver configuration. The build runner now provides a volatile resolver; a fresh Python build and full test rerun succeeded: 48,271 tests run, 2,087 skipped, no failures. Python installed successfully.
-- Latest standalone client tests: 23 passed; build/recovery/model-cache tests: 14 passed.
+The successful runtime was **not an untouched import**. The host launcher was
+repaired to bind X11 at `/opt/logos-host-x11` and link it into the guest `/tmp`,
+which systemd mounts separately. The container's failed `console-getty.service`
+was masked and its failed state reset. `--verbose` was added to the guest server
+launcher to obtain offload logs, and an updated health script was copied in.
+The packaged September image predates those guest changes. See
+[troubleshooting](troubleshooting.md) for reproducing them; do not describe the
+archive alone as having passed the final health run.
 
-## Actual failures / blockers
+On **October 2, 2026**, read-only reinspection confirmed `logos-dev` was still
+running, systemd reported `running`, and the inference and terminal services
+were active. The complete GPU/inference suite was not rerun for this documentation
+update. `make test` passed **23 AI/client tests and 17 build/recovery/model-cache
+tests**, plus shell syntax checks.
 
-- Passwordless sudo is unavailable, but root operations are now available through the dedicated console explicitly shared by the user.
-- Host NVIDIA NVML fails: loaded kernel module 535.309.01 versus userspace NVML 580.178.04. No driver replacements or reboot were performed. The actual Quadro M2000 was identified through /proc/driver/nvidia at 0000:04:00.0.
-- start-logos stopped at the host NVIDIA check. Health correctly failed because logos-dev does not exist.
+## Artifact identities
 
-## Storage and next stage
+These hashes identify the local September build, not downloadable GitHub release
+assets:
 
-All current work is now under this repository, as requested. Local ignored config selects `.work/build` on the 171 GiB-free workspace filesystem and the existing `goldenfir` LXD pool. `/srv` was on a different filesystem with only 7.1 GiB free and is not used by this checkout.
+| Artifact | SHA-256 |
+| --- | --- |
+| `logos-rootfs.tar.xz` | `7087ba04b49d04e0ef0512d36914d298f4b7a2c92390000a7bdb5b94c2615e87` |
+| `logos-metadata.tar.xz` | `e9fb38fe28fa900dc63b28efbc327ccfbc2d5f6ba7e9dd1fe1c8e34f96e53921` |
 
-The actual LFS build has resumed through the shared root console; its live log is `reports/build-root-console.log` and timestamped logs are under `.work/build/logs`. CUDA/GPU completion additionally requires reconciling the host NVIDIA driver/library mismatch. The full compiler/CUDA/glibc combination remains untested; source inspection is not proof of compatibility.
+LXD imported fingerprint:
+`fda7af49b499efd32be4ae327d97ad3ec2a91b14bf73bf78d4091b336407f669`.
+Build logs, stage/package markers, manifests, ABI output and checksums are retained
+locally under `$LOGOS_BUILD` (this checkout uses ignored `.work/build`). Live
+console output is in ignored `reports/build-root-console.log`. Historical tracked
+reports may describe earlier failures; they are not current status snapshots.
 
-No rootfs tarball or LXD metadata artifact has been presented as a completed distribution. Reports under `reports/` contain the actual local test and failed startup results. Build artifacts/state are under `.work/build`.
+## Tests and limitations
+
+The LFS build exercised real upstream suites. Diagnosed environmental exceptions
+are documented in [LFS deviations](lfs-deviations.md), with preserved summaries
+for glibc, Binutils, GCC, ACL, Findutils, Groff, Tar and other packages. Known
+upstream failures remain failures; successful stage completion does not turn
+those results into PASS. Python's recovered full suite ran 48,271 tests with
+2,087 skipped and no failures.
+
+The separate GCC 14 CUDA compatibility build disables libsanitizer. Its full
+suite was attempted during development and had sanitizer/plugin/torture failures;
+it is not claimed as an all-green compiler qualification. The current stage
+skips that full suite by default and reuses an already installed compiler.
+The advertised `LOGOS_FULL_GCC_CHECK` switch is not passed through the normal
+clean chroot wrapper. Do not infer full GCC coverage from the build's exit code.
+
+llama.cpp CTest initially failed because the build chroot lacks the host's
+`libcuda.so.1`. The stage now skips CTest and the version probe in that condition.
+Rootfs ABI validation allows this one runtime-injected dependency while rejecting
+other unresolved libraries and temporary-toolchain/Ubuntu multiarch paths.
+Actual CUDA computation and inference were verified in LXD, but this does not
+replace the entire upstream llama.cpp test suite.
+
+The current health check relies on invocation-specific llama.cpp log output. Its
+fallback for logs containing only per-layer assignment has not been validated;
+the exercised run contained the aggregate `29/29` line. Its semantic checks accept
+some command patterns that can still be incorrect (for example, sorting a long
+`ls` listing without a size key). Review suggestions manually. GPU success is
+limited to the exercised M2000 host; there is no qualification for other cards,
+models, driver versions or a fresh end-to-end rebuild of every subsequent edit.

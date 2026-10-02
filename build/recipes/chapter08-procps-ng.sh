@@ -15,6 +15,9 @@ set -o pipefail
 make
 
 chown -R tester .
-su tester -c "PATH=$PATH make check"
+# DejaGNU determines the terminal name before spawning background test
+# processes. Give the tester a dedicated controlling PTY so pgrep's tty
+# selector checks the same terminal the processes inherit.
+su tester -c "PATH=$PATH script -q -e -c 'make check' /dev/null"
 
 make install

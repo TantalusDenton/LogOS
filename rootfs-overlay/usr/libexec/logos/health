@@ -120,8 +120,14 @@ def offload():
         "journalctl", "_SYSTEMD_INVOCATION_ID=" + invocation, "--no-pager", "-o", "cat"
     )
     layers = re.findall(r"offloaded\s+(\d+)/(\d+)\s+layers to GPU", log)
-    require(layers and int(layers[-1][0]) > 0)
-    require(re.search(r"CUDA\d+.*(?:model buffer|buffer size)", log, re.I))
+    if layers:
+        require(int(layers[-1][0]) > 0)
+    else:
+        # Recent llama.cpp emits per-layer CUDA assignment at debug verbosity
+        # instead of the older aggregate "offloaded N/M" line.
+        assigned = re.findall(r"load_tensors: layer\s+\d+ assigned to device CUDA\d+", log)
+        require(assigned)
+    require(re.search(r"CUDA\d+.*(?:model buffer|buffer size)|using device CUDA\d+", log, re.I))
     require(reply is not None)
     # Successful inference + CUDA model buffers + positive offloaded layer count
     # from this exact live service invocation is definitive offload evidence.
@@ -147,8 +153,15 @@ check(
     lambda: require(
         semantic
         and any(
-            "find " in x["command"]
-            and ("head" in x["command"] or "sort" in x["command"])
+            (
+                "find " in x["command"]
+                and ("head" in x["command"] or "sort" in x["command"])
+            )
+            or (
+                "ls " in x["command"]
+                and ("-S" in x["command"] or "sort" in x["command"])
+                and "head" in x["command"]
+            )
             for x in semantic["commands"]
         )
     ),

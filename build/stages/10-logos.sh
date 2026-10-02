@@ -15,7 +15,7 @@ shutil.copytree('/logos-build/logos-ai/logos_ai',sysconfig.get_path('purelib')+'
 PYTHON
 chmod 755 /usr/bin/logos-* /usr/libexec/logos/*
 systemctl enable logos-ai.service
-userdel -r tester
+userdel -r tester 2>/dev/null || true
 INNER
 cp "$REPO/sources/model.json" "$LFS/etc/logos/model.json"
 python3 "$REPO/build/validate-rootfs.py"

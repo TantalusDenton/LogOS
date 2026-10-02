@@ -8,6 +8,7 @@ set -o pipefail
 sed -e 's/GROUP="render"/GROUP="video"/' \
     -e 's/GROUP="sgx", //'               \
     -i rules.d/50-udev-default.rules.in
+patch -Np1 -i /logos-build/build/patches/systemd-userns-map-skip.patch
 
 mkdir -p build
 cd       build
@@ -34,7 +35,13 @@ meson setup ..                \
 ninja
 
 echo 'NAME="Linux From Scratch"' > /etc/os-release
-unshare -m ninja test
+# The suite byte-compares UTF-8 table ellipses and measures help output in
+# characters. Keep the LFS build locale, but run these Unicode-aware tests in
+# the UTF-8 locale that systemd declares for its test environment. A one-UID
+# user namespace lets Systemd skip the UID-1 mapping case unavailable in the
+# unprivileged build container. The test patch accepts only that capability
+# denial; all other test failures still stop the build.
+LC_ALL=C.UTF-8 unshare -m ninja test
 
 ninja install
 

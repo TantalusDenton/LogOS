@@ -36,6 +36,10 @@ mkdir -p "$LFS"/{dev,proc,sys,run,sources,logos-build,tools}
 # semantics. Change only this private namespace's rootfs mount, not the disk.
 mount --bind "$LFS" "$LFS"
 mount -o remount,bind,rw,suid,dev "$LFS"
+# The workspace root can have been created by the invoking user before the
+# chroot exists. Systemd's safe-path tests require the chroot's / boundary to
+# be owned by root, like the rest of the installed tree.
+chown root:root "$LFS"
 mount --bind "$LOGOS_BUILD/tools" "$LFS/tools"
 mount --bind "$REPO" "$LFS/logos-build"
 mount -o remount,bind,ro "$LFS/logos-build"

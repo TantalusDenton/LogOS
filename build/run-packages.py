@@ -48,6 +48,26 @@ def chroot(args):
     ]
 
 
+def setup_util_linux_fincore_fs(package_dir):
+    """Give fincore its required direct-I/O semantics without touching host mounts."""
+    image = LFS / "tmp" / ".logos-util-linux-fincore.img"
+    mountpoint = package_dir / "tests" / "output" / "fincore"
+    mountpoint.mkdir(parents=True, exist_ok=True)
+    call(["truncate", "-s", "512M", str(image)])
+    try:
+        call(["/usr/sbin/mkfs.ext4", "-q", "-F", str(image)])
+        call(["mount", "-o", "loop", str(image), str(mountpoint)])
+    except BaseException:
+        image.unlink(missing_ok=True)
+        raise
+    return image, mountpoint
+
+
+def teardown_util_linux_fincore_fs(image, mountpoint):
+    call(["umount", str(mountpoint)])
+    image.unlink(missing_ok=True)
+
+
 def main(stage):
     items = {
         p["name"]: p
@@ -77,8 +97,11 @@ def main(stage):
             continue
         source = p["source"]
         recipe = ROOT / p["recipe"]
+        fingerprint_inputs = recipe.read_bytes()
+        if p["id"] == "chapter08-systemd":
+            fingerprint_inputs += (ROOT / "build/patches/systemd-userns-map-skip.patch").read_bytes()
         fingerprint = hashlib.sha256(
-            recipe.read_bytes() + json.dumps(items.get(source), sort_keys=True).encode()
+            fingerprint_inputs + json.dumps(items.get(source), sort_keys=True).encode()
         ).hexdigest()
         marker = state / (p["id"] + ".done")
         if marker.exists():
@@ -171,6 +194,11 @@ def main(stage):
             )
         print("BUILD", p["id"], flush=True)
         start = time.time()
+        fincore_fs = (
+            setup_util_linux_fincore_fs(package_dir)
+            if p["id"] == "chapter08-util-linux"
+            else None
+        )
         try:
             call(args, cwd=package_dir)
         except BaseException:
@@ -180,6 +208,8 @@ def main(stage):
         finally:
             if source:
                 save_test_results(package_dir, p['id'])
+            if fincore_fs:
+                teardown_util_linux_fincore_fs(*fincore_fs)
         marker.write_text(fingerprint + "\n")
         with open(BUILD / "state/history.tsv", "a") as f:
             f.write(f'{time.time()}\t{p["id"]}\tPASS\t{time.time()-start:.0f}s\n')

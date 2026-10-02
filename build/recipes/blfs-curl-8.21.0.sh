@@ -7,6 +7,7 @@ export XORG_CONFIG="--prefix=/usr --sysconfdir=/etc --localstatedir=/var --disab
 ./configure --prefix=/usr    \
             --disable-static \
             --with-openssl   \
+            --without-libpsl \
             --with-ca-path=/etc/ssl/certs &&
 make
 

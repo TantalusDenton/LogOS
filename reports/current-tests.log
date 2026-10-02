@@ -24,7 +24,7 @@ test_redirect_rejected_before_any_remote_connection (test_local_http.LocalHTTP.t
 test_schema_sent_and_only_loopback_used_despite_proxy (test_local_http.LocalHTTP.test_schema_sent_and_only_loopback_used_despite_proxy) ... ok
 
 ----------------------------------------------------------------------
-Ran 23 tests in 1.044s
+Ran 23 tests in 1.062s
 
 OK
 /usr/bin/python3 -m unittest discover -s tests -v
@@ -47,7 +47,7 @@ test_runner_repair_allowed_but_completed_inputs_protected (test_recovery.Recover
 test_tar_rejects_actual_capability_loss (test_recovery.Recovery.test_tar_rejects_actual_capability_loss) ... ok
 
 ----------------------------------------------------------------------
-Ran 17 tests in 0.035s
+Ran 17 tests in 0.039s
 
 OK
 KNOWN LFS FAILURE (not PASS): test/cp; temporary Coreutils lacks ACL support

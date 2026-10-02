@@ -31,8 +31,13 @@ def audit(old, new):
     for p in plans:
         marker = STATE / 'packages' / (p['id'] + '.done')
         if marker.exists():
-            digest = hashlib.sha256((ROOT / p['recipe']).read_bytes()
-                                    + json.dumps(items.get(p['source']), sort_keys=True).encode()).hexdigest()
+            fingerprint_inputs = (ROOT / p['recipe']).read_bytes()
+            if p['id'] == 'chapter08-systemd':
+                fingerprint_inputs += (ROOT / 'build/patches/systemd-userns-map-skip.patch').read_bytes()
+            digest = hashlib.sha256(
+                fingerprint_inputs
+                + json.dumps(items.get(p['source']), sort_keys=True).encode()
+            ).hexdigest()
             if marker.read_text().strip() != digest:
                 raise RuntimeError('Completed package input changed: ' + p['id'])
     for name in changed:

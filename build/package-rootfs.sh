@@ -10,7 +10,8 @@ fi
 mkdir -p "$LOGOS_BUILD/artifacts"
 # Exclude mounts and build-only content. The build tree remains intact for diagnosis.
 XZ_OPT='-T4 -3' tar --numeric-owner --xattrs --acls --one-file-system \
- --exclude='./dev/*' --exclude='./proc/*' --exclude='./sys/*' --exclude='./run/*' \
+ --exclude='./dev' --exclude='./dev/*' --exclude='./proc' --exclude='./proc/*' \
+ --exclude='./sys' --exclude='./sys/*' --exclude='./run' --exclude='./run/*' \
  --exclude='./sources' --exclude='./logos-build' --exclude='./tools' \
  --exclude='./tmp/*' --exclude='./var/tmp/*' --exclude='./var/cache/*' \
  --exclude='./var/log/*' --exclude='./root/.bash_history' \

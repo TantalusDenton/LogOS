@@ -33,10 +33,18 @@ console_user=${SUDO_USER:-$(stat -c '%U' "$REPO")}
 [[ $console_user != root ]] || { echo 'Cannot determine the normal workspace owner' >&2; exit 1; }
 console_group=$(id -gn "$console_user")
 install -d -o "$console_user" -g "$console_group" -m 0700 "$console_dir"
+# tmux leaves its UNIX socket behind when a server is killed unexpectedly.
+# Verify that the socket has a live server before treating it as reusable.
+if [[ -S $socket ]] && ! "$tmux_bin" -S "$socket" list-sessions >/dev/null 2>&1; then
+ rm -f -- "$socket"
+fi
 if [[ ! -S $socket ]]; then
  "$tmux_bin" -f /dev/null -S "$socket" new-session -d -s logos-root -c "$REPO" \
    /usr/bin/env -u LD_LIBRARY_PATH HOME=/root HISTFILE=/dev/null /bin/bash --noprofile --norc
  "$tmux_bin" -S "$socket" set-option -g history-limit 10000
+elif ! "$tmux_bin" -S "$socket" has-session -t logos-root 2>/dev/null; then
+ "$tmux_bin" -S "$socket" new-session -d -s logos-root -c "$REPO" \
+   /usr/bin/env -u LD_LIBRARY_PATH HOME=/root HISTFILE=/dev/null /bin/bash --noprofile --norc
 fi
 # Both UNIX-socket access and tmux's explicit per-user ACL are required.
 "$tmux_bin" -S "$socket" server-access -w "$console_user"

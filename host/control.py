@@ -109,7 +109,10 @@ def configure_x11():
     required = {
         "type": "disk",
         "source": "/tmp/.X11-unix",
-        "path": "/tmp/.X11-unix",
+        # /tmp is a container-managed tmpfs, so a direct mount there can be
+        # hidden when systemd mounts /tmp. Keep the host socket tree at a
+        # stable rootfs path and link it into /tmp after boot.
+        "path": "/opt/logos-host-x11",
         "readonly": "true",
     }
     if current is None:
@@ -123,8 +126,15 @@ def configure_x11():
             *[k + "=" + v for k, v in required.items() if k != "type"],
         )
     elif any(current.get(k) != v for k, v in required.items()):
-        raise RuntimeError(
-            "Existing logos-x11 device does not match the read-only X socket mount"
+        lxc("config", "device", "remove", NAME, "logos-x11")
+        lxc(
+            "config",
+            "device",
+            "add",
+            NAME,
+            "logos-x11",
+            "disk",
+            *[k + "=" + v for k, v in required.items() if k != "type"],
         )
     lxc("config", "set", NAME, "environment.DISPLAY=" + DISPLAY)
 
@@ -184,7 +194,8 @@ def create():
         "-c",
         "limits.memory=" + os.getenv("LOGOS_MEMORY", "16GiB"),
     ]
-    lxc(*args, timeout=300)
+    # Large CUDA images can take several minutes to materialize in a btrfs pool.
+    lxc(*args, timeout=900)
     if os.getenv("LOGOS_DISK_SIZE"):
         lxc(
             "config",
@@ -292,6 +303,9 @@ def start():
     if c["status"] != "Running":
         lxc("start", NAME, timeout=120)
     xephyr()
+    guest("mkdir", "-p", "/opt/logos-host-x11")
+    guest("rm", "-rf", "/tmp/.X11-unix")
+    guest("ln", "-s", "/opt/logos-host-x11", "/tmp/.X11-unix")
     guest("ldconfig")
     state = guest("systemctl", "is-system-running", "--wait", check=False, timeout=90)
     if state != "running":

@@ -18,7 +18,11 @@ for binary in [
         stderr=subprocess.STDOUT,
         text=True,
     )
-    assert "not found" not in result, (binary, result)
+    unresolved = [
+        line for line in result.splitlines()
+        if "not found" in line and "libcuda.so.1" not in line
+    ]
+    assert not unresolved, (binary, result)
     assert "/tools/" not in result and "x86_64-linux-gnu" not in result, (
         binary,
         result,
